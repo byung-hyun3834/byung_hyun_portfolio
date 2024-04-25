@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
+
 
 const Circle = styled.div`
   width: 5rem;
@@ -16,18 +18,11 @@ const Circle = styled.div`
 const Header = styled.div`
   width: 100%;
   height: 40px;
-  padding:  0 40px;
   display: flex;
   align-items: center;
   color: #fff;
-  background: linear-gradient(90deg, rgba(44,46,49,1) 0%, rgba(67,106,166,1) 8%, rgba(67,106,166,1) 23%, rgba(44,46,49,1) 37%);
-  & img{
-    max-width: 81px;
-  }
-  & .initial{
-    width: 20px;
-    height: 20px;
-  }
+  background: rgba(217, 217, 217, 0.5);
+  padding: 0 40px;
 `
 
 const Sidebar = styled.div`
@@ -40,11 +35,6 @@ const Sidebar = styled.div`
 const SidebarRoot = styled.div`
   flex-grow: 1;
   border-right: 1px solid red;
-  & .title{
-    font-size: 20px;
-    font-weight: 600;
-    padding: 0 14px;
-  }
 `
 
 const Container = styled.div`
@@ -53,13 +43,29 @@ const Container = styled.div`
   background: #1E1F22;
 `
 
+const StyeldLink = styled(Link)`
+    border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  & img{
+    max-width: 280px;
+    max-height: 280px;
+  }
+`;
 
 export {
 
     Header,
     Sidebar,
     SidebarRoot,
-    Container
+    Container,
+    StyeldLink
 }
 
 export default {
@@ -67,5 +73,6 @@ export default {
     Header,
     Sidebar,
     SidebarRoot,
-    Container
+    Container,
+    StyeldLink
 }
