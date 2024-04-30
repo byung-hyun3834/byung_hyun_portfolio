@@ -13,7 +13,8 @@ export default function CustomRoute() {
     return (
         <Routes>
             <Route path="/" element={<Pages.MainPage />} />
-            <Route path="/Portfolio" element={<Pages.PortfolioPage />} />
+            <Route path="/Portfolio/*" element={<Pages.PortfolioPage/>} >
+            </Route>
         </Routes>
     );
 }
