@@ -1,10 +1,10 @@
-import {Route} from "react-router-dom";
+import {Routes, Route, useLocation, Link} from 'react-router-dom';
 import Pages from "../index";
 import React from "react";
+import {StyeldLinkProject} from "../../components/Layout/styles";
 
 
 function HomePage() {
-
     return (
         <>
             <div className="section_01">
@@ -20,10 +20,53 @@ function HomePage() {
             </div>
             <div className="skills">
                 <div className="title">SKills</div>
+                <div className="skill_list">
+                    <div className="skill">
+                        <div className="title">
+                            Language
+                        </div>
+                        <div className="tags">
+                            <span className="tag">Typescript</span>
+                            <span className="tag">Javascript</span>
+                        </div>
+                    </div>
+                    <div className="skill">
+                        <div className="title">
+                            Language
+                        </div>
+                        <div className="tags">
+                            <span className="tag">Typescript</span>
+                            <span className="tag">Javascript</span>
+                        </div>
+                    </div>
+                    <div className="skill">
+                        <div className="title">
+                            Language
+                        </div>
+                        <div className="tags">
+                            <span className="tag">Typescript</span>
+                            <span className="tag">Javascript</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-
             <div className="Career">
-                <div className="title">SKills</div>
+                <div className="title">Career</div>
+                <div className="info_wrap">
+                    <div className="head">
+                        <div className="title">파스토</div>
+                        <div className="date">2021.12 ~ 2023.08</div>
+                    </div>
+                    <div className="text">
+                        프론트엔드 개발을 리딩하여 프로젝트 설계, 리팩토링과 기술부채 관리, 디자인 시스템 등을 이끌며
+                        상업용 부동산 수익증권 거래 플랫폼인 Rebit을 개발했습니다.
+                    </div>
+                    <div className="list"></div>
+                </div>
+            </div>
+            <div className="Project">
+                <div className="title">Project</div>
+                <StyeldLinkProject to='/Portfolio/Project'>go_to_project</StyeldLinkProject>
             </div>
         </>
     );

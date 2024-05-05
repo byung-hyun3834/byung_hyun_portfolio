@@ -2,7 +2,7 @@ import {Routes, Route, useLocation, Link} from 'react-router-dom';
 import Styles, {StyeldLinkTab, StyeldLinkRoot} from './styles'
 import Pages from "pages";
 import React from "react";
-import ContactPage from "../../pages/ContactPage";
+
 const Layout = () => {
     const loacation = useLocation();
     const this_pathName = loacation.pathname;
@@ -44,15 +44,15 @@ const Layout = () => {
                             </div>
                             <StyeldLinkRoot to='/Portfolio'>
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
-                                home
+                                home.js
                             </StyeldLinkRoot>
                             <StyeldLinkRoot to='/Portfolio/Project'>
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
-                                project
+                                project.js
                             </StyeldLinkRoot>
                             <StyeldLinkRoot to='/Portfolio/Contact'>
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
-                                Contact
+                                Contact.js
                             </StyeldLinkRoot>
                         </div>
                     </Styles.SidebarRoot>
@@ -61,29 +61,30 @@ const Layout = () => {
                     <div className="tabs">
                         <StyeldLinkTab to='/Portfolio'>
                             <img className="module_icon" src={'/img/icons/js_icon.png'}/>
-                            home
+                            home.js
                         </StyeldLinkTab>
                         <StyeldLinkTab to='/Portfolio/Project'>
                             <img className="module_icon" src={'/img/icons/js_icon.png'}/>
-                            project
+                            project.js
                         </StyeldLinkTab>
                         <StyeldLinkTab to='/Portfolio/Contact'>
                             <img className="module_icon" src={'/img/icons/js_icon.png'}/>
-                            Contact
+                            Contact.js
                         </StyeldLinkTab>
                     </div>
                     <div className="container">
-                        <Routes>
-                            <Route path="/" element={<Pages.HomePage />} />
-                            <Route path="/Project" element={<Pages.ProjectPage />} />
-                            <Route path="/Contact" element={<Pages.ContactPage />} />
-                        </Routes>
-
+                        <div className="container_wrap">
+                            <Routes>
+                                <Route path="/" element={<Pages.HomePage />} />
+                                <Route path="/Project" element={<Pages.ProjectPage />} />
+                                <Route path="/Contact" element={<Pages.ContactPage />} />
+                            </Routes>
+                        </div>
                     </div>
 
                 </Styles.Contents>
             </div>
-            <div style={{background:'#2A2C2F', borderTop: '1px solid gray', height: '60px'}}></div>
+            <div style={{background:'#2A2C2F', borderTop: '1px solid #1E1F22', height: '60px'}}></div>
         </>
     )
 }

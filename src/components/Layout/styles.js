@@ -33,6 +33,7 @@ const Header = styled.div`
     & img{
       width: 20px;
       height: 20px;
+      margin-right: 10px;
     }
   }
   & .repo{
@@ -41,6 +42,7 @@ const Header = styled.div`
     & img{
       width: 20px;
       height: 20px;  
+      margin-right: 10px;
     }
   }
   & .settings{
@@ -62,7 +64,7 @@ const Sidebar = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-right: 1px solid gray;
+    border-right: 1px solid #1E1F22;
     flex-shrink: 0;
     & .initial{
       width: 30px;
@@ -76,7 +78,8 @@ const Sidebar = styled.div`
 `
 const SidebarRoot = styled.div`
   flex-grow: 1;
-  border-right: 1px solid gray;
+  
+  overflow: hidden;
   & .root_wrap{
     padding-left: 20px;
   }
@@ -87,7 +90,7 @@ const SidebarRoot = styled.div`
     font-size: 20px;
     font-weight: 600;
     padding: 0 14px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #1E1F22;
   }
   & .root{
     height: 30px;
@@ -107,25 +110,31 @@ const SidebarRoot = styled.div`
 `
 
 const Contents = styled.div`
-  flex-grow: 1;
-  width: 100%;
   background: #1E1F22;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
   & .tabs{
     height: 60px;
     display: flex;
-    border-bottom: 1px solid gray;
+    flex-shrink: 0;
+    border-bottom: 1px solid #2B2D30;
   }
   & .container{
-    border: 1px solid gray;
-    padding: 60px;
-    max-width: 734px;
+    overflow-y: scroll;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    & .container_wrap{
+      padding: 60px;
+    }
   }
   & .section_01{
     display: flex;
     justify-content: space-between;
     padding-bottom: 46px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #1E1F22;
     & .wrap{
       position: relative;
     }
@@ -162,9 +171,58 @@ const Contents = styled.div`
   & .skills{
     margin-top: 36px;
     padding-bottom: 30px;
-    border-bottom: 1px solid gray;
-    & .title{
+    border-bottom: 1px solid #1E1F22;
+    & > .title{
       font-size: 24px;
+    }
+    & .skill_list{
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      & .skill{
+        display: flex;
+        align-items: center;
+        & .title{
+          font-size: 16px;
+          min-width: 100px;
+        }
+        & .tags{
+          display: flex;
+          gap: 13px;
+          & .tag{
+            color: #4493F8;
+            background: #143C59;
+            padding: 4px 15px;
+            border-radius: 50px;
+          }
+        }
+      }
+      
+    }
+  }
+  & .Career{
+    margin-top: 30px;
+    & > .title {
+      font-size: 36px;
+    }
+    & .info_wrap{
+      margin-top: 20px;
+      padding: 20px;
+      background: #2B2D30;
+       & .head{
+         display: flex;
+         justify-content: space-between;
+       }
+      & .text{
+        margin-top: 20px;
+      }
+    }
+  }
+  & .Project{
+    margin-top: 58px;
+    & .title{
+      font-size: 36px;
     }
   }
 `
@@ -190,6 +248,12 @@ const StyeldLinkTab = styled(Link)`
   }
 `;
 
+const StyeldLinkProject = styled(Link)`
+  color: #56C2FF;
+  margin-top: 10px;
+  display: inline-block;
+`;
+
 
 export {
     Header,
@@ -198,6 +262,7 @@ export {
     Contents,
     StyeldLinkTab,
     StyeldLinkRoot,
+    StyeldLinkProject,
 }
 
 export default {
@@ -208,4 +273,5 @@ export default {
     Contents,
     StyeldLinkTab,
     StyeldLinkRoot,
+    StyeldLinkProject,
 }
