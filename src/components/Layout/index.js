@@ -6,7 +6,7 @@ import React from "react";
 const Layout = () => {
     const loacation = useLocation();
     const this_pathName = loacation.pathname;
-
+    console.log(this_pathName)
     return (
         <>
             <Styles.Header>
@@ -46,11 +46,11 @@ const Layout = () => {
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                 home.js
                             </StyeldLinkRoot>
-                            <StyeldLinkRoot to='/Portfolio/Project'>
+                            <StyeldLinkRoot to='/Portfolio/Project' className={this_pathName == "/Portfolio/Project" && "active"}>
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                 project.js
                             </StyeldLinkRoot>
-                            <StyeldLinkRoot to='/Portfolio/Contact'>
+                            <StyeldLinkRoot to='/Portfolio/Contact' className={this_pathName == "/Portfolio/Contact" && "active"}>
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                 Contact.js
                             </StyeldLinkRoot>
@@ -63,14 +63,15 @@ const Layout = () => {
                             <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                             home.js
                         </StyeldLinkTab>
-                        <StyeldLinkTab to='/Portfolio/Project'>
+                        <StyeldLinkTab to='/Portfolio/Project' className={this_pathName == "/Portfolio/Project" && "active"}>
                             <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                             project.js
                         </StyeldLinkTab>
-                        <StyeldLinkTab to='/Portfolio/Contact'>
+                        <StyeldLinkTab to='/Portfolio/Contact' className={this_pathName == "/Portfolio/Contact" && "active"}>
                             <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                             Contact.js
                         </StyeldLinkTab>
+
                     </div>
                     <div className="container">
                         <div className="container_wrap">
