@@ -1,5 +1,5 @@
 import {Routes, Route, useLocation, Link} from 'react-router-dom';
-import Styles, {StyeldLinkTab, StyeldLinkRoot} from './styles'
+import Styles, {StyeldLinkTab, StyeldLinkRoot, StyeldLinkCircles} from './styles'
 import Pages from "pages";
 import React from "react";
 
@@ -11,7 +11,11 @@ const Layout = () => {
         <>
             <Styles.Header>
                 <div style={{display: 'flex'}}>
-                    <img className="window_circles" src={'/img/icons/window_circles.png'} />
+                    <div className="linkCircles_wrap">
+                        <Styles.StyeldLinkCircles to='/' className="close"></Styles.StyeldLinkCircles>
+                        <Styles.StyeldLinkCircles to='/' className="hide"></Styles.StyeldLinkCircles>
+                        <Styles.StyeldLinkCircles to='/' className="full_screen"></Styles.StyeldLinkCircles>
+                    </div>
                     <div className="user">
                         <img className="initial" src={'/img/icons/user_ initial.png'} />
                         byung_hyun_portfolio
@@ -23,7 +27,7 @@ const Layout = () => {
                 </div>
                 <img className="settings" src={'/img/icons/settings_icon.png'} />
             </Styles.Header>
-            <div style={{display: 'flex', height: 'calc(100vh - 104px)'}}>
+            <div style={{display: 'flex', height: 'calc(100vh - 101px)'}}>
                 <Styles.Sidebar>
                     <div className="project_wrap">
                         <img className="initial" src={'/img/icons/project_icon.png'} />
@@ -42,7 +46,7 @@ const Layout = () => {
                                 <img className="module_icon" src={'/img/icons/export_icon.png'}/>
                                 src
                             </div>
-                            <StyeldLinkRoot to='/Portfolio'>
+                            <StyeldLinkRoot to='/Portfolio' className={this_pathName == "/Portfolio" && "active"}>
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                 home.js
                             </StyeldLinkRoot>
@@ -59,7 +63,7 @@ const Layout = () => {
                 </Styles.Sidebar>
                 <Styles.Contents>
                     <div className="tabs">
-                        <StyeldLinkTab to='/Portfolio'>
+                        <StyeldLinkTab to='/Portfolio' className={this_pathName == "/Portfolio" && "active"}>
                             <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                             home.js
                         </StyeldLinkTab>

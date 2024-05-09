@@ -1,24 +1,24 @@
 import { Link } from 'react-router-dom';
-import Styles, {Header, StyeldLink} from "./styles";
+import Styles, {Dock, MainContainer} from "./styles";
+import MainLoading from "./components/MainLoading";
 
 function MainPage() {
     return (
-        <>
-
-            <div style={{width:'100%', height:'100vh', backgroundSize: 'cover', backgroundImage: `url("/img/bg/main_bg.jpg")`}}>
-
+        <Styles.MainContainer>
                 <Styles.Header>
                     byung_hyun_portfolio
                 </Styles.Header>
-                <StyeldLink to='/Portfolio'>
+                <Styles.StyeldLink to='/Portfolio'>
                     <img src={'/img/icons/ij_icon.png'}/>
-                    port
-                </StyeldLink>
-
-
-
-            </div>
-        </>
+                    Portfolio
+                </Styles.StyeldLink>
+                <MainLoading onClick={() => {console.log('asdfasdf')}}/>
+                <Styles.Dock>
+                    <div className="dockIcon">
+                        <img src="/img/icons/ij_icon.png" />
+                    </div>
+                </Styles.Dock>
+        </Styles.MainContainer>
     );
 }
 

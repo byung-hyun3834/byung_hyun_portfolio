@@ -9,7 +9,7 @@ function ContactPage() {
         <Styles.Container>
 
             <div className="pageTitle">
-                Contact_me 👋
+                Contact me 👋
             </div>
             <div className="tag_wrap">
                 <span>contact</span>

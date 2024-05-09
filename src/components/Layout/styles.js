@@ -49,6 +49,12 @@ const Header = styled.div`
     width: 20px;
     height: 20px;
   }
+  
+  & .linkCircles_wrap{
+    display: flex;
+    gap: 12px;
+    margin-right: 33px;
+  }
 `
 
 const Sidebar = styled.div`
@@ -128,6 +134,7 @@ const Contents = styled.div`
     box-sizing: border-box;
     & .container_wrap{
       padding: 60px;
+      max-width: 820px;
     }
   }
   & .section_01{
@@ -227,6 +234,22 @@ const Contents = styled.div`
   }
 `
 
+const StyeldLinkCircles = styled(Link)`
+  width: 19px;
+  height: 19px;
+  border-radius: 50px;
+  background: red;
+  &.close{
+    background: #ED6A5F;
+  }
+  &.hide{
+    background: #FFBB2E;
+  }
+  &.full_screen{
+    background: #61C454;
+  }
+`
+
 
 const StyeldLinkRoot = styled(Link)`
   padding: 5px 0px 5px 66px;
@@ -277,10 +300,10 @@ export {
     StyeldLinkTab,
     StyeldLinkRoot,
     StyeldLinkProject,
+    StyeldLinkCircles,
 }
 
 export default {
-
     Header,
     Sidebar,
     SidebarRoot,
@@ -288,4 +311,5 @@ export default {
     StyeldLinkTab,
     StyeldLinkRoot,
     StyeldLinkProject,
+    StyeldLinkCircles,
 }

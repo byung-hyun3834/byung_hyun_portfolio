@@ -35,6 +35,8 @@ const Container = styled.div`
         padding: 4px 15px;
         border-radius: 50px;
         margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
       }
     }
     & .button_group{

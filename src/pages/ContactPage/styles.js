@@ -41,6 +41,7 @@ const Container = styled.div`
       }
       & a{
         text-decoration: underline;
+        text-underline-offset: .3rem;
         color: #4493F8;
       }
     }
