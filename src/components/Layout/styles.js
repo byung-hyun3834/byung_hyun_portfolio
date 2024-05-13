@@ -1,56 +1,54 @@
 import styled, { css } from 'styled-components';
 import {Link} from "react-router-dom";
 
-const Circle = styled.div`
-  width: 5rem;
-  height: 5rem;
-  background: ${props => props.color || 'black'};
-  border-radius: 50%;
-  ${props =>
-    props.huge &&
-    css`
-      width: 10rem;
-      height: 10rem;
-    `}
-`;
-
 const Header = styled.div`
   height: 40px;
-  padding:  0 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #fff;
-  background: linear-gradient(90deg, rgba(44,46,49,1) 0%, rgba(67,106,166,1) 8%, rgba(67,106,166,1) 23%, rgba(44,46,49,1) 37%);
-  & .window_circles{
+  color: ${props => props.theme.textColor};
+  //background: #2A2C2F;
+  background: ${props => props.theme.bgColor};
+  overflow: hidden;
+  //background: linear-gradient(90deg, rgba(44,46,49,1) 0%, rgba(67,106,166,1) 8%, rgba(67,106,166,1) 23%, rgba(44,46,49,1) 37%);
+  & .window_circles {
     max-width: 81px;
     margin-right: 33px;
   }
-  & .user{
+
+  & .user {
     display: flex;
     align-items: center;
     margin-right: 82px;
-    & img{
+
+    & img {
+      box-shadow: 30px 0 100px 150px rgba(54, 75, 147, 0.54);
       width: 20px;
       height: 20px;
       margin-right: 10px;
     }
   }
-  & .repo{
+
+  & .repo {
     display: flex;
     align-items: center;
-    & img{
+
+    & img {
       width: 20px;
-      height: 20px;  
+      height: 20px;
       margin-right: 10px;
     }
   }
-  & .settings{
+
+  & .settings {
     width: 20px;
     height: 20px;
   }
-  
-  & .linkCircles_wrap{
+
+  & .linkCircles_wrap {
+    position: relative;
     display: flex;
     gap: 12px;
     margin-right: 33px;
@@ -61,8 +59,10 @@ const Sidebar = styled.div`
   display: flex;
   flex-shrink: 0;
   width: 270px;
-  color: #fff;
-  background: #2A2C2F;
+  //color: #fff;
+  color: ${props => props.theme.textColor};
+  //background: #2A2C2F;
+  background: ${props => props.theme.bgColor};
   & .project_wrap{
     width: 60px;
     padding:  20px 0;
@@ -116,7 +116,8 @@ const SidebarRoot = styled.div`
 `
 
 const Contents = styled.div`
-  background: #1E1F22;
+  //background: #1E1F22;
+  background: ${props => props.theme.bgColor};
   color: #fff;
   display: flex;
   flex-direction: column;

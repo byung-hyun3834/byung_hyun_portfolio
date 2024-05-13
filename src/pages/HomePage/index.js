@@ -1,12 +1,16 @@
 import {Routes, Route, useLocation, Link} from 'react-router-dom';
-import Pages from "../index";
+import styled, { css } from 'styled-components';
 import React from "react";
 import {StyeldLinkProject} from "../../components/Layout/styles";
+import {useTheme} from "../../context"
+
 
 
 function HomePage() {
+
     return (
         <>
+
             <div className="section_01">
                 <div className="wrap">
                     <div className="sub_title">안녕하세요, 프론트엔드 개발자</div>

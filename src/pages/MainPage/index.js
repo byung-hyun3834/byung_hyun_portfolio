@@ -12,7 +12,10 @@ function MainPage() {
                     <img src={'/img/icons/ij_icon.png'}/>
                     Portfolio
                 </Styles.StyeldLink>
-                <MainLoading onClick={() => {console.log('asdfasdf')}}/>
+                <div onClick={() => {console.log('asdfasdf')}}>
+                    asdfds
+                </div>
+                {/*<MainLoading onClick={() => {console.log('asdfasdf')}}/>*/}
                 <Styles.Dock>
                     <div className="dockIcon">
                         <img src="/img/icons/ij_icon.png" />
