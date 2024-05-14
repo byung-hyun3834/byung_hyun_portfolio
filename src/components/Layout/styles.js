@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, {css} from 'styled-components';
 import {Link} from "react-router-dom";
 
 const Header = styled.div`
@@ -63,20 +63,24 @@ const Sidebar = styled.div`
   color: ${props => props.theme.textColor};
   //background: #2A2C2F;
   background: ${props => props.theme.bgColor};
-  & .project_wrap{
+  border-right: 1px solid ${props => props.theme.borderColor};
+
+  & .project_wrap {
     width: 60px;
-    padding:  20px 0;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border-right: 1px solid #1E1F22;
+    border-right: 1px solid ${props => props.theme.borderColor};
     flex-shrink: 0;
-    & .initial{
+
+    & .initial {
       width: 30px;
       height: 30px;
     }
-    & .repo{
+
+    & .repo {
       width: 20px;
       height: 20px;
     }
@@ -84,31 +88,35 @@ const Sidebar = styled.div`
 `
 const SidebarRoot = styled.div`
   flex-grow: 1;
-  
   overflow: hidden;
-  & .root_wrap{
+
+  & .root_wrap {
     padding-left: 20px;
   }
-  & .title{
+
+  & .title {
     height: 60px;
     display: flex;
     align-items: center;
     font-size: 20px;
     font-weight: 600;
     padding: 0 14px;
-    border-bottom: 1px solid #1E1F22;
+    border-bottom: 1px solid ${props => props.theme.borderColor};
   }
-  & .root{
+
+  & .root {
     height: 30px;
     display: flex;
     align-items: center;
   }
-  & .arrow_down{
+
+  & .arrow_down {
     width: 10px;
     height: 10px;
     margin-right: 12px;
   }
-  & .module_icon{
+
+  & .module_icon {
     width: 20px;
     height: 20px;
     margin-right: 5px;
@@ -117,48 +125,58 @@ const SidebarRoot = styled.div`
 
 const Contents = styled.div`
   //background: #1E1F22;
-  background: ${props => props.theme.bgColor};
-  color: #fff;
+  background: ${props => props.theme.contentBgColor};
+  color: ${props => props.theme.textColor};
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   overflow: hidden;
-  & .tabs{
+
+  & .tabs {
     height: 60px;
     display: flex;
     flex-shrink: 0;
     border-bottom: 1px solid #2B2D30;
   }
-  & .container{
+
+  & .container {
     overflow-y: scroll;
     border-right: 3px solid transparent;
     box-sizing: border-box;
-    & .container_wrap{
+
+    & .container_wrap {
       padding: 60px;
       max-width: 820px;
     }
   }
-  & .section_01{
+
+  & .section_01 {
     display: flex;
     justify-content: space-between;
     padding-bottom: 46px;
-    border-bottom: 1px solid #1E1F22;
-    & .wrap{
+    border-bottom: 1px solid ${props => props.theme.bgColor};
+    & .wrap {
       position: relative;
     }
-    & .title{
+
+    & .title {
       font-size: 48px;
       margin-top: 15px;
+      font-weight: 600;
     }
-    & .sub_title{
+
+    & .sub_title {
       font-size: 24px;
+      font-weight: 500;
     }
-    & img{
+
+    & img {
       display: block;
       width: 200px;
       height: 200px;
     }
-    & button{
+
+    & button {
       position: absolute;
       left: 0;
       bottom: 0;
@@ -167,38 +185,49 @@ const Contents = styled.div`
       background: #4A88C7;
       border: 0;
       border-radius: 5px;
+      font-size: 24px;
       color: #fff;
-      
+
     }
   }
-  & .section_02{
+
+  & .section_02 {
     margin-top: 46px;
     padding: 20px 35px;
-    background: #2B2D30;
+    background: ${props => props.theme.bgColor};
+    color: ${props => props.theme.textColor};
   }
-  & .skills{
+
+  & .skills {
     margin-top: 36px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #1E1F22;
-    & > .title{
+    border-bottom:  1px solid ${props => props.theme.bgColor};
+
+    & > .title {
       font-size: 24px;
+      font-weight: bold;
     }
-    & .skill_list{
+
+    & .skill_list {
       margin-top: 15px;
       display: flex;
       flex-direction: column;
       gap: 18px;
-      & .skill{
+
+      & .skill {
         display: flex;
         align-items: center;
-        & .title{
+
+        & .title {
           font-size: 16px;
           min-width: 100px;
         }
-        & .tags{
+
+        & .tags {
           display: flex;
           gap: 13px;
-          & .tag{
+
+          & .tag {
             color: #4493F8;
             background: #143C59;
             padding: 4px 15px;
@@ -206,30 +235,38 @@ const Contents = styled.div`
           }
         }
       }
-      
+
     }
   }
-  & .Career{
+
+  & .Career {
     margin-top: 30px;
+
     & > .title {
       font-size: 36px;
+      font-weight: bold;
     }
-    & .info_wrap{
+
+    & .info_wrap {
       margin-top: 20px;
       padding: 20px;
-      background: #2B2D30;
-       & .head{
-         display: flex;
-         justify-content: space-between;
-       }
-      & .text{
+      background: ${props => props.theme.bgColor};
+
+      & .head {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      & .text {
         margin-top: 20px;
       }
     }
   }
-  & .Project{
+
+  & .Project {
     margin-top: 58px;
-    & .title{
+
+    & .title {
       font-size: 36px;
     }
   }
@@ -240,13 +277,16 @@ const StyeldLinkCircles = styled(Link)`
   height: 19px;
   border-radius: 50px;
   background: red;
-  &.close{
+
+  &.close {
     background: #ED6A5F;
   }
-  &.hide{
+
+  &.hide {
     background: #FFBB2E;
   }
-  &.full_screen{
+
+  &.full_screen {
     background: #61C454;
   }
 `
@@ -256,12 +296,13 @@ const StyeldLinkRoot = styled(Link)`
   padding: 5px 0px 5px 66px;
   display: flex;
   align-items: center;
-  color: #fff;
+
   height: 30px;
-  &.active{
-    background: #5E5E5E;  
+
+  &.active {
+    background: ${props => props.theme.activeColor};;
   }
-  
+
 `;
 
 const StyeldLinkTab = styled(Link)`
@@ -269,19 +310,23 @@ const StyeldLinkTab = styled(Link)`
   position: relative;
   align-items: center;
   padding: 0 20px;
-  color: #fff;
+  //color: #fff;
+  color: ${props => props.theme.textColor};
   gap: 5px;
-  & img{
+
+  & img {
     width: 20px;
     height: 20px;
   }
-  &.active::after{
+
+  &.active::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
-    height: 2px;
+    bottom: -1px;
+    height: 4px;
     background: #4A88C7;
+    border-radius: 5px;
     width: 100%;
   }
 `;
@@ -292,6 +337,10 @@ const StyeldLinkProject = styled(Link)`
   display: inline-block;
 `;
 
+const Footer = styled.div`
+  background: ${props => props.theme.bgColor};
+  border-top: 1px solid ${props => props.theme.borderColor};
+`
 
 export {
     Header,
@@ -302,6 +351,7 @@ export {
     StyeldLinkRoot,
     StyeldLinkProject,
     StyeldLinkCircles,
+    Footer,
 }
 
 export default {
@@ -313,4 +363,5 @@ export default {
     StyeldLinkRoot,
     StyeldLinkProject,
     StyeldLinkCircles,
+    Footer,
 }

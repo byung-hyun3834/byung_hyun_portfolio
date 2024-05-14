@@ -1,52 +1,60 @@
 import styled from "styled-components";
 const Container = styled.div`
-  
   max-width: 820px;
-  & .pageTitle{
+
+  & .pageTitle {
     font-size: 48px;
     font-weight: bold;
   }
-  & .tag_wrap{
+
+  & .tag_wrap {
     margin-top: 11px;
     display: inline-flex;
     border-radius: 4px;
     overflow: hidden;
-    & span{
+
+    & span {
       padding: 3px 10px;
-     background: #5E5E5E;
+      background: #5E5E5E;
+      color: #fff;
       &:nth-child(2) {
         background: #FFCF4D;
       }
     }
   }
-  & .links_wrap{
+
+  & .links_wrap {
     margin-top: 92px;
-    & .title{
+
+    & .title {
       font-size: 40px;
       font-weight: bold;
     }
-    & .links{
+
+    & .links {
       margin-top: 22px;
       width: 100%;
       border-left: 10px solid #4A88C7;
-      background: #303236;
+      background: ${props => props.theme.bgColor};
       padding: 36px 27px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       gap: 10px;
-      & div{
+
+      & div {
         font-size: 20px;
         font-weight: 600;
       }
-      & a{
+
+      & a {
         text-decoration: underline;
         text-underline-offset: .3rem;
         color: #4493F8;
       }
     }
   }
-  
+
 `
 
 export { Container };

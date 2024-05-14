@@ -23,21 +23,18 @@ function ThemeToggle({ toggle, mode }) {
 
     return (
         <ToggleWrapper onClick={toggle} modes={mode}>
-            {mode === 'light' ? '🌝' : '🌚'}
+            {mode === 'dark' ? '🌚' : '🌝'}
         </ToggleWrapper>
     );
 }
-
-
-
-
 const ToggleWrapper = styled.button`
   position: fixed;
   z-index: 999999;
   bottom: 4%;
   right: 3%;
-  background-color: ${props => (console.log(props), props.theme.bgColor)};
+  background-color: ${props => props.theme.bgColor};
   border: ${props => props.theme.borderColor};
+  color: ${props => props.modes === 'light' ? '#31302E' : '#bbb'};
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -139,7 +136,7 @@ const Layout = () => {
 
                     </Styles.Contents>
                 </div>
-                <div style={{background:'#2A2C2F', borderTop: '1px solid #1E1F22', height: '60px'}}></div>
+                <Styles.Footer></Styles.Footer>
             </ThemeProvider>
 
         </>

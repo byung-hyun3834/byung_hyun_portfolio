@@ -4,6 +4,7 @@ const Container = styled.div`
   max-width: 820px;
   & .pageTitle{
     font-size: 48px;
+    font-weight: bold;
   }
   & .list_wrap{
     margin-top: 55px;
@@ -15,7 +16,7 @@ const Container = styled.div`
   & .item{
     max-width: 279px;
     border: 1px solid red;
-    
+    background: ${props => props.theme.bgColor};
     & .wrap{
       padding: 13px 13px 30px 13px;
     }
