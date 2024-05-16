@@ -15,13 +15,14 @@ const Container = styled.div`
   }
   & .item{
     max-width: 279px;
-    border: 1px solid red;
+    border-radius: 5px;
+    overflow: hidden;
+    
     background: ${props => props.theme.bgColor};
     & .wrap{
       padding: 13px 13px 30px 13px;
     }
     & .title{
-      margin-top: 13px;
       font-size: 20px;
     }
     & .text{
@@ -46,7 +47,6 @@ const Container = styled.div`
       border-radius: 4px;
       overflow: hidden;
       & button{
-        
         color: #fff;
         background: #5F5F5F;
         border: 0;

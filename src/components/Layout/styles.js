@@ -155,6 +155,7 @@ const Contents = styled.div`
     justify-content: space-between;
     padding-bottom: 46px;
     border-bottom: 1px solid ${props => props.theme.bgColor};
+
     & .wrap {
       position: relative;
     }
@@ -194,6 +195,8 @@ const Contents = styled.div`
   & .section_02 {
     margin-top: 46px;
     padding: 20px 35px;
+    font-weight: 500;
+    line-height: 1.4;
     background: ${props => props.theme.bgColor};
     color: ${props => props.theme.textColor};
   }
@@ -201,7 +204,7 @@ const Contents = styled.div`
   & .skills {
     margin-top: 36px;
     padding-bottom: 30px;
-    border-bottom:  1px solid ${props => props.theme.bgColor};
+    border-bottom: 1px solid ${props => props.theme.bgColor};
 
     & > .title {
       font-size: 24px;
@@ -229,7 +232,8 @@ const Contents = styled.div`
 
           & .tag {
             color: #4493F8;
-            background: #143C59;
+            //background: #143C59;
+            background: ${props => props.theme.tagBgColor};
             padding: 4px 15px;
             border-radius: 50px;
           }
@@ -241,7 +245,8 @@ const Contents = styled.div`
 
   & .Career {
     margin-top: 30px;
-
+    font-weight: 500;
+    line-height: 1.4;
     & > .title {
       font-size: 36px;
       font-weight: bold;

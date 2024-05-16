@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 const Container = styled.div`
   max-width: 820px;
 
@@ -17,6 +18,7 @@ const Container = styled.div`
       padding: 3px 10px;
       background: #5E5E5E;
       color: #fff;
+
       &:nth-child(2) {
         background: #FFCF4D;
       }
@@ -34,7 +36,7 @@ const Container = styled.div`
     & .links {
       margin-top: 22px;
       width: 100%;
-      border-left: 10px solid #4A88C7;
+      border-left: 5px solid #4A88C7;
       background: ${props => props.theme.bgColor};
       padding: 36px 27px;
       box-sizing: border-box;
@@ -57,6 +59,76 @@ const Container = styled.div`
 
 `
 
-export { Container };
+const Form = styled.form`
+  & .emailTitle {
+    margin-top: 50px;
+    font-size: 35px;
+    font-weight: bold;
+  }
 
-export default { Container };
+  & .emailSubTitle {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  & .emailFormWrap {
+    display: flex;
+    margin-top: 40px;
+    gap: 40px;
+    padding: 30px;
+    border-left: 5px solid #4A88C7;
+    background: ${props => props.theme.bgColor};
+
+    & .emailForm {
+      width: 100%;
+
+      &:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      & .labelItem {
+        display: flex;
+        flex-direction: column;
+
+        & label {
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+        & input {
+          margin-top: 10px;
+          background: none;
+          border: none;
+          border-bottom: 2px solid ${props => props.theme.inputBorder};
+          padding: 3px;
+          &:focus {
+            outline: none;
+          }
+        }
+
+        & textarea {
+          margin-top: 10px;
+          height: 200px;
+          resize: none;
+          border: 2px solid ${props => props.theme.inputBorder};
+          background: transparent;
+        }
+      }
+      & .submit{
+        font-size: 18px;
+        margin-top: 20px;
+        padding: 10px 0;
+        width: 100%;
+        border: none;
+        color: #fff;
+        background: #4A88C7;
+      }
+    }
+  }
+`
+
+export {Container, Form};
+
+export default {Container, Form};

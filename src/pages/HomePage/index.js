@@ -1,13 +1,13 @@
 import React from "react";
 import {StyeldLinkProject} from "../../components/Layout/styles";
-import FolderIcon from "../../components/icons/FolderIcon";
+import Tag from "../../components/Tag";
+
 
 
 
 function HomePage() {
     return (
         <>
-            <FolderIcon/>
             <div className="section_01">
                 <div className="wrap">
                     <div className="sub_title">안녕하세요, 프론트엔드 개발자</div>
@@ -28,8 +28,8 @@ function HomePage() {
                             Language
                         </div>
                         <div className="tags">
-                            <span className="tag">Typescript</span>
-                            <span className="tag">Javascript</span>
+                            <Tag name='Typescript' />
+                            <Tag name='Javascript' />
                         </div>
                     </div>
                     <div className="skill">
@@ -37,8 +37,8 @@ function HomePage() {
                             Language
                         </div>
                         <div className="tags">
-                            <span className="tag">Typescript</span>
-                            <span className="tag">Javascript</span>
+                            <Tag name='Typescript' />
+                            <Tag name='Javascript' />
                         </div>
                     </div>
                     <div className="skill">
@@ -46,8 +46,8 @@ function HomePage() {
                             Language
                         </div>
                         <div className="tags">
-                            <span className="tag">Typescript</span>
-                            <span className="tag">Javascript</span>
+                            <Tag name='Typescript' />
+                            <Tag name='Javascript' />
                         </div>
                     </div>
                 </div>

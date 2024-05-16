@@ -14,6 +14,10 @@ const Header = styled.div`
   color: #fff;
   background: rgba(217, 217, 217, 0.5);
   padding: 0 40px;
+  & .initial{
+    width: 20px;
+    margin-right: 20px;
+  }
 `
 
 
@@ -39,7 +43,6 @@ const Dock = styled.div`
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
-  min-width: 200px;
   background: rgba(217, 217, 217, 0.5);
   padding:10px 20px 5px 20px;
   border-radius: 15px;

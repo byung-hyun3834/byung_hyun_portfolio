@@ -5,6 +5,10 @@ import React from "react";
 import {ThemeProvider, useTheme} from "../../context";
 import {GlobalStyle} from '../../theme/GlobalStyle'
 import styled from "styled-components";
+import SettingsIcon from "../icons/SettingsIcon";
+import FolderIcon from "../icons/FolderIcon";
+import VcsIcon from "../icons/VcsIcon";
+import ModuleIcon from "../icons/Module";
 
 
 const AppLayout = ({children}) => {
@@ -68,29 +72,31 @@ const Layout = () => {
                             byung_hyun_portfolio
                         </div>
                         <div className="repo">
-                            <img className="initial" src={'/img/icons/repo_icon.png'} />
+                            <VcsIcon/>
+                            {/*<img className="initial" src={'/img/icons/repo_icon.png'} />*/}
                             main
                         </div>
                     </div>
-                    <img className="settings" src={'/img/icons/settings_icon.png'} />
+                    <SettingsIcon className="settings" />
                 </Styles.Header>
                 <div style={{display: 'flex', height: 'calc(100vh - 101px)'}}>
                     <Styles.Sidebar>
                         <div className="project_wrap">
-                            <img className="initial" src={'/img/icons/project_icon.png'} />
-                            <img className="repo" src={'/img/icons/repo_icon.png'} />
+                            <FolderIcon className="initial" />
+                            <VcsIcon className="repo" />
                         </div>
                         <Styles.SidebarRoot>
                             <div className='title'>Project</div>
                             <div className="root_wrap">
                                 <div className="root">
                                     <img className="arrow_down" src={'/img/icons/arrow_down_icon.png'}/>
-                                    <img className="module_icon" src={'/img/icons/module_icon.png'}/>
+                                    <ModuleIcon className="module_icon" />
                                     byung_hyun_portfolio
                                 </div>
                                 <div className="root" style={{paddingLeft:"22px"}}>
                                     <img className="arrow_down" src={'/img/icons/arrow_down_icon.png'}/>
-                                    <img className="module_icon" src={'/img/icons/export_icon.png'}/>
+                                    <FolderIcon className="initial" />
+                                    {/*<img className="module_icon" src={'/img/icons/export_icon.png'}/>*/}
                                     src
                                 </div>
                                 <StyeldLinkRoot to='/Portfolio' className={this_pathName == "/Portfolio" && "active"}>
