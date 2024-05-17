@@ -21,7 +21,7 @@ const Header = styled.div`
 `
 
 
-const StyeldLink = styled(Link)`
+const StyeldLink = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,8 +48,16 @@ const Dock = styled.div`
   border-radius: 15px;
   & .dockIcon{
     width: 50px;
-    
   }
+`
+
+const IjModal = styled.div`
+  position: absolute;
+  max-width: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 `
 
 export {
@@ -57,6 +65,7 @@ export {
     Header,
     StyeldLink,
     Dock,
+    IjModal,
 }
 
 export default {
@@ -64,4 +73,5 @@ export default {
     Header,
     StyeldLink,
     Dock,
+    IjModal,
 }
