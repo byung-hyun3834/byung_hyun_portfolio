@@ -68,7 +68,7 @@ const Layout = () => {
                             <Styles.StyeldLinkCircles to='/' className="full_screen"></Styles.StyeldLinkCircles>
                         </div>
                         <div className="user">
-                            <img className="initial" src={'/img/icons/user_ initial.png'} />
+                            <img className="initial" src={'/img/icons/user_initial_blue.png'} />
                             byung_hyun_portfolio
                         </div>
                         <div className="repo">
@@ -79,23 +79,23 @@ const Layout = () => {
                     </div>
                     <SettingsIcon className="settings" />
                 </Styles.Header>
-                <div style={{display: 'flex', height: 'calc(100vh - 101px)'}}>
+                <div style={{display: 'flex', height: 'calc(100vh - 80px)'}}>
                     <Styles.Sidebar>
                         <div className="project_wrap">
-                            <FolderIcon className="initial" />
-                            <VcsIcon className="repo" />
+                            <FolderIcon className="initial"/>
+                            <VcsIcon className="repo"/>
                         </div>
                         <Styles.SidebarRoot>
                             <div className='title'>Project</div>
                             <div className="root_wrap">
                                 <div className="root">
                                     <img className="arrow_down" src={'/img/icons/arrow_down_icon.png'}/>
-                                    <ModuleIcon className="module_icon" />
+                                    <ModuleIcon className="module_icon"/>
                                     byung_hyun_portfolio
                                 </div>
-                                <div className="root" style={{paddingLeft:"22px"}}>
+                                <div className="root" style={{paddingLeft: "22px"}}>
                                     <img className="arrow_down" src={'/img/icons/arrow_down_icon.png'}/>
-                                    <FolderIcon className="initial" />
+                                    <FolderIcon className="initial"/>
                                     {/*<img className="module_icon" src={'/img/icons/export_icon.png'}/>*/}
                                     src
                                 </div>
@@ -103,11 +103,13 @@ const Layout = () => {
                                     <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                     home.js
                                 </StyeldLinkRoot>
-                                <StyeldLinkRoot to='/Portfolio/Project' className={this_pathName == "/Portfolio/Project" && "active"}>
+                                <StyeldLinkRoot to='/Portfolio/Project'
+                                                className={this_pathName == "/Portfolio/Project" && "active"}>
                                     <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                     project.js
                                 </StyeldLinkRoot>
-                                <StyeldLinkRoot to='/Portfolio/Contact' className={this_pathName == "/Portfolio/Contact" && "active"}>
+                                <StyeldLinkRoot to='/Portfolio/Contact'
+                                                className={this_pathName == "/Portfolio/Contact" && "active"}>
                                     <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                     Contact.js
                                 </StyeldLinkRoot>
@@ -120,11 +122,13 @@ const Layout = () => {
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                 home.js
                             </StyeldLinkTab>
-                            <StyeldLinkTab to='/Portfolio/Project' className={this_pathName == "/Portfolio/Project" && "active"}>
+                            <StyeldLinkTab to='/Portfolio/Project'
+                                           className={this_pathName == "/Portfolio/Project" && "active"}>
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                 project.js
                             </StyeldLinkTab>
-                            <StyeldLinkTab to='/Portfolio/Contact' className={this_pathName == "/Portfolio/Contact" && "active"}>
+                            <StyeldLinkTab to='/Portfolio/Contact'
+                                           className={this_pathName == "/Portfolio/Contact" && "active"}>
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                 Contact.js
                             </StyeldLinkTab>
@@ -133,9 +137,9 @@ const Layout = () => {
                         <div className="container">
                             <div className="container_wrap">
                                 <Routes>
-                                    <Route path="/" element={<Pages.HomePage />} />
-                                    <Route path="/Project" element={<Pages.ProjectPage />} />
-                                    <Route path="/Contact" element={<Pages.ContactPage />} />
+                                    <Route path="/" element={<Pages.HomePage/>}/>
+                                    <Route path="/Project" element={<Pages.ProjectPage/>}/>
+                                    <Route path="/Contact" element={<Pages.ContactPage/>}/>
                                 </Routes>
                             </div>
                         </div>

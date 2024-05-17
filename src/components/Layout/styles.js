@@ -24,10 +24,13 @@ const Header = styled.div`
     margin-right: 82px;
 
     & img {
-      box-shadow: 30px 0 100px 150px rgba(54, 75, 147, 0.54);
+      color: rgb(78 146 233 / 54%);
+      box-shadow: 30px 0 100px 150px ${props => props.theme.userInitialColor};
+      //box-shadow: 30px 0 100px 150px rgb(78 146 233 / 54%);
       width: 20px;
       height: 20px;
       margin-right: 10px;
+      border-radius: 4px;
     }
   }
 
@@ -345,6 +348,8 @@ const StyeldLinkProject = styled(Link)`
 const Footer = styled.div`
   background: ${props => props.theme.bgColor};
   border-top: 1px solid ${props => props.theme.borderColor};
+  height: 40px;
+  box-sizing: border-box;
 `
 
 export {

@@ -105,6 +105,7 @@ const Form = styled.form`
           padding: 3px;
           &:focus {
             outline: none;
+            border-bottom: 2px solid #4493F8;
           }
         }
 
@@ -114,6 +115,10 @@ const Form = styled.form`
           resize: none;
           border: 2px solid ${props => props.theme.inputBorder};
           background: transparent;
+          &:focus {
+            outline: none;
+            border: 2px solid #4493F8;
+          }
         }
       }
       & .submit{

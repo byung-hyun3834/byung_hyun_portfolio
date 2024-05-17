@@ -1,4 +1,5 @@
 export const darkTheme = {
+    userInitialColor:'rgba(78, 146, 233, 0.54)',
     bgColor: '#2A2C2F',
     contentBgColor:'#1E1F22',
     textColor: '#fff',
@@ -10,6 +11,7 @@ export const darkTheme = {
     inputBorder: '#7c828d',
 }
 export const lightTheme = {
+    userInitialColor:'rgba(128, 184, 255, 0.54)',
     bgColor: '#e0e4eb',
     contentBgColor:'#fff',
     textColor: '#000',
