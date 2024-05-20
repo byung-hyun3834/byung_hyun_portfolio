@@ -55,6 +55,14 @@ const Header = styled.div`
     display: flex;
     gap: 12px;
     margin-right: 33px;
+    & img{
+      opacity: 0;
+    }
+    &:hover{
+      & img{
+        opacity: 0.8;
+      }
+    }
   }
 `
 
@@ -180,19 +188,7 @@ const Contents = styled.div`
       height: 200px;
     }
 
-    & button {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 164px;
-      height: 44px;
-      background: #4A88C7;
-      border: 0;
-      border-radius: 5px;
-      font-size: 24px;
-      color: #fff;
-
-    }
+    
   }
 
   & .section_02 {
@@ -285,9 +281,14 @@ const StyeldLinkCircles = styled(Link)`
   height: 19px;
   border-radius: 50px;
   background: red;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &.close {
     background: #ED6A5F;
+    & img{
+      width: 13px;
+    }
   }
 
   &.hide {
@@ -298,7 +299,21 @@ const StyeldLinkCircles = styled(Link)`
     background: #61C454;
   }
 `
-
+const StyeldLinkContact = styled(Link)`
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 164px;
+  height: 44px;
+  background: #4A88C7;
+  border: 0;
+  border-radius: 5px;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
 
 const StyeldLinkRoot = styled(Link)`
   padding: 5px 0px 5px 66px;
@@ -359,6 +374,7 @@ export {
     Contents,
     StyeldLinkTab,
     StyeldLinkRoot,
+    StyeldLinkContact,
     StyeldLinkProject,
     StyeldLinkCircles,
     Footer,
@@ -371,6 +387,7 @@ export default {
     Contents,
     StyeldLinkTab,
     StyeldLinkRoot,
+    StyeldLinkContact,
     StyeldLinkProject,
     StyeldLinkCircles,
     Footer,

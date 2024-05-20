@@ -63,19 +63,19 @@ const Layout = () => {
                 <Styles.Header>
                     <div style={{display: 'flex'}}>
                         <div className="linkCircles_wrap">
-                            <Styles.StyeldLinkCircles to='/' className="close"></Styles.StyeldLinkCircles>
-                            <Styles.StyeldLinkCircles to='/' className="hide"></Styles.StyeldLinkCircles>
-                            <Styles.StyeldLinkCircles to='/' className="full_screen"></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles to='/' className="close"><img src={'/img/icons/close_icon.png'}/></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles  className="hide"></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles  className="full_screen"></Styles.StyeldLinkCircles>
                         </div>
                         <div className="user">
                             <img className="initial" src={'/img/icons/user_initial_blue.png'} />
                             byung_hyun_portfolio
                         </div>
-                        <div className="repo">
+                        <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>
                             <VcsIcon/>
                             {/*<img className="initial" src={'/img/icons/repo_icon.png'} />*/}
                             main
-                        </div>
+                        </a>
                     </div>
                     <SettingsIcon className="settings" />
                 </Styles.Header>
@@ -83,7 +83,9 @@ const Layout = () => {
                     <Styles.Sidebar>
                         <div className="project_wrap">
                             <FolderIcon className="initial"/>
-                            <VcsIcon className="repo"/>
+                            <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>
+                                <VcsIcon className="repo"/>
+                            </a>
                         </div>
                         <Styles.SidebarRoot>
                             <div className='title'>Project</div>
@@ -132,7 +134,6 @@ const Layout = () => {
                                 <img className="module_icon" src={'/img/icons/js_icon.png'}/>
                                 Contact.js
                             </StyeldLinkTab>
-
                         </div>
                         <div className="container">
                             <div className="container_wrap">
@@ -143,12 +144,10 @@ const Layout = () => {
                                 </Routes>
                             </div>
                         </div>
-
                     </Styles.Contents>
                 </div>
                 <Styles.Footer></Styles.Footer>
             </ThemeProvider>
-
         </>
     )
 }

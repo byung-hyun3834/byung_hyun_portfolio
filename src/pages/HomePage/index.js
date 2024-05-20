@@ -1,5 +1,5 @@
 import React from "react";
-import {StyeldLinkProject} from "../../components/Layout/styles";
+import {StyeldLinkContact, StyeldLinkProject} from "../../components/Layout/styles";
 import Tag from "../../components/Tag";
 
 
@@ -11,7 +11,7 @@ function HomePage() {
                 <div className="wrap">
                     <div className="sub_title">안녕하세요, 프론트엔드 개발자</div>
                     <div className="title">손병현 입니다</div>
-                    <button>contact ✉️</button>
+                    <StyeldLinkContact to={'/Portfolio/Contact'}>contact ✉️</StyeldLinkContact>
                 </div>
                 <img className="profile" src={'/img/resource/profile.png'}/>
             </div>

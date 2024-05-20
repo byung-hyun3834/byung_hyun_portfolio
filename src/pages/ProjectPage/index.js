@@ -14,7 +14,7 @@ function ProjectPage() {
             </div>
             <div className="list_wrap">
                 <div className="item">
-                    <img src={'/img/resource/thumbnail.png'} />
+                    <img src={'/img/resource/thumbnail_01.jpg'} />
                     <div className="wrap">
                         <div className="title">
                             Makergallery Back-office
@@ -32,7 +32,7 @@ function ProjectPage() {
                     </div>
                 </div>
                 <div className="item">
-                    <img src={'/img/resource/thumbnail.png'} />
+                    <img src={'/img/resource/thumbnail_02.jpg'} />
                     <div className="wrap">
                         <div className="title">
                             Makergallery Back-office
@@ -52,7 +52,7 @@ function ProjectPage() {
                     </div>
                 </div>
                 <div className="item">
-                    <img src={'/img/resource/thumbnail.png'} />
+                    <img src={'/img/resource/thumbnail_03.jpg'} />
                     <div className="wrap">
                         <div className="title">
                             Makergallery Back-office
@@ -72,7 +72,7 @@ function ProjectPage() {
                     </div>
                 </div>
                 <div className="item">
-                    <img src={'/img/resource/thumbnail.png'} />
+                    <img src={'/img/resource/thumbnail_04.jpg'} />
                     <div className="wrap">
                         <div className="title">
                             Makergallery Back-office
@@ -92,7 +92,7 @@ function ProjectPage() {
                     </div>
                 </div>
                 <div className="item">
-                    <img src={'/img/resource/thumbnail.png'} />
+                    <img src={'/img/resource/thumbnail_05.jpg'} />
                     <div className="wrap">
                         <div className="title">
                             Makergallery Back-office

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 const Container = styled.div`
-  border: 1px solid red;
+  
   max-width: 820px;
   & .pageTitle{
     font-size: 48px;
@@ -9,12 +9,11 @@ const Container = styled.div`
   & .list_wrap{
     margin-top: 55px;
     display: grid;
-    grid-template-columns:  repeat(3,1fr);
-    grid-column-gap: 20px;
+    grid-template-columns:  repeat(2,1fr);
+    grid-column-gap: 30px;
     grid-row-gap: 50px;
   }
   & .item{
-    max-width: 279px;
     border-radius: 5px;
     overflow: hidden;
     
