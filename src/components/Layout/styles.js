@@ -142,7 +142,7 @@ const Contents = styled.div`
   flex-direction: column;
   flex-grow: 1;
   overflow: hidden;
-
+  
   & .tabs {
     height: 60px;
     display: flex;
@@ -227,15 +227,6 @@ const Contents = styled.div`
 
         & .tags {
           display: flex;
-          gap: 13px;
-
-          & .tag {
-            color: #4493F8;
-            //background: #143C59;
-            background: ${props => props.theme.tagBgColor};
-            padding: 4px 15px;
-            border-radius: 50px;
-          }
         }
       }
 

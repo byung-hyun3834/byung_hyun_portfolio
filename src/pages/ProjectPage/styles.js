@@ -24,20 +24,20 @@ const Container = styled.div`
     & .title{
       font-size: 20px;
     }
-    & .text{
+    & .description{
       margin-top: 30px;
       font-size: 16px;
     }
     & .tags{
       margin-top: 20px;
       & .tag{
-        color: #4493F8;
-        background: #143C59;
-        padding: 4px 15px;
-        border-radius: 50px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        display: inline-block;
+        //color: #4493F8;
+        //background: #143C59;
+        //padding: 4px 15px;
+        //border-radius: 50px;
+        //margin-right: 10px;
+        //margin-bottom: 10px;
+        //display: inline-block;
       }
     }
     & .button_group{

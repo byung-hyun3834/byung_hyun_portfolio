@@ -1,8 +1,8 @@
 import React from "react";
-
+import Styles from "./styles";
 const Tag = ({name}) => {
     return(
-        <span className="tag">{name}</span>
+        <Styles.Tag className="tag">{name}</Styles.Tag>
     )
 }
 

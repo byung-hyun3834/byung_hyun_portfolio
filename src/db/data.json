@@ -1,0 +1,47 @@
+[
+  {
+    "thumbnail": "/img/resource/thumbnail_01.jpg",
+    "title": "아트페",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": [
+      "react",
+      "next"
+    ]
+  },
+  {
+    "thumbnail": "/img/resource/thumbnail_02.jpg",
+    "title": "손경수 갤러리",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": [
+      "react",
+      "next"
+    ]
+  },
+  {
+    "thumbnail": "/img/resource/thumbnail_03.jpg",
+    "title": "피플레이스",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": [
+      "react",
+      "next"
+    ]
+  },
+  {
+    "thumbnail": "/img/resource/thumbnail_04.jpg",
+    "title": "라디",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": [
+      "react",
+      "next"
+    ]
+  },
+  {
+    "thumbnail": "/img/resource/thumbnail_05.jpg",
+    "title": "피플레이스",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": [
+      "react",
+      "next"
+    ]
+  }
+]
