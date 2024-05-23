@@ -85,11 +85,11 @@ const Sidebar = styled.div`
     justify-content: space-between;
     border-right: 1px solid ${props => props.theme.borderColor};
     flex-shrink: 0;
-
-    & .initial {
-      width: 30px;
-      height: 30px;
+    & .mobileIcon_wrap{
+      display: flex;
+      flex-direction: column;
     }
+   
 
     & .repo {
       width: 20px;
@@ -102,11 +102,11 @@ const SidebarRoot = styled.div`
   overflow: hidden;
 
   & .root_wrap {
-    padding-left: 20px;
+    padding: 0 10px;
   }
 
   & .title {
-    height: 60px;
+    height: 45px;
     display: flex;
     align-items: center;
     font-size: 20px;
@@ -116,21 +116,24 @@ const SidebarRoot = styled.div`
   }
 
   & .root {
+    width: fit-content;
     height: 30px;
     display: flex;
     align-items: center;
+    gap: 10px;
   }
 
   & .arrow_down {
     width: 10px;
     height: 10px;
-    margin-right: 12px;
+    
   }
+  
 
   & .module_icon {
     width: 20px;
     height: 20px;
-    margin-right: 5px;
+    
   }
 `
 
@@ -142,12 +145,12 @@ const Contents = styled.div`
   flex-direction: column;
   flex-grow: 1;
   overflow: hidden;
-  
+
   & .tabs {
-    height: 60px;
+    height: 45px;
     display: flex;
     flex-shrink: 0;
-    border-bottom: 1px solid #2B2D30;
+    border-bottom: 1px solid ${props => props.theme.borderColor};
   }
 
   & .container {
@@ -165,7 +168,7 @@ const Contents = styled.div`
     display: flex;
     justify-content: space-between;
     padding-bottom: 46px;
-    border-bottom: 1px solid ${props => props.theme.bgColor};
+    border-bottom: 2px solid ${props => props.theme.sectionBorderColor};
 
     & .wrap {
       position: relative;
@@ -188,7 +191,7 @@ const Contents = styled.div`
       height: 200px;
     }
 
-    
+
   }
 
   & .section_02 {
@@ -202,12 +205,15 @@ const Contents = styled.div`
 
   & .skills {
     margin-top: 36px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid ${props => props.theme.bgColor};
+    border-radius: 4px;
+    border: 2px solid ${props => props.theme.sectionBorderColor};
+    padding: 20px 20px 30px;
+      // border-bottom: 1px solid ${props => props.theme.bgColor};
 
     & > .title {
       font-size: 24px;
       font-weight: bold;
+      color: ${props => props.theme.skillTitleColor};
     }
 
     & .skill_list {
@@ -222,7 +228,9 @@ const Contents = styled.div`
 
         & .title {
           font-size: 16px;
+          font-weight: 800;
           min-width: 100px;
+          color: ${props => props.theme.skillTextColor};
         }
 
         & .tags {
@@ -237,6 +245,7 @@ const Contents = styled.div`
     margin-top: 30px;
     font-weight: 500;
     line-height: 1.4;
+
     & > .title {
       font-size: 36px;
       font-weight: bold;
@@ -310,9 +319,8 @@ const StyeldLinkRoot = styled(Link)`
   padding: 5px 0px 5px 66px;
   display: flex;
   align-items: center;
-
   height: 30px;
-
+  border-radius: 4px;
   &.active {
     background: ${props => props.theme.activeColor};;
   }
@@ -351,6 +359,14 @@ const StyeldLinkProject = styled(Link)`
   display: inline-block;
 `;
 
+const StyeldLinkMobile = styled(Link)`
+  padding: 10px;
+  border-radius: 4px;
+  &.active {
+    background: ${props => props.theme.activeColor};;
+  }
+`
+
 const Footer = styled.div`
   background: ${props => props.theme.bgColor};
   border-top: 1px solid ${props => props.theme.borderColor};
@@ -368,6 +384,7 @@ export {
     StyeldLinkContact,
     StyeldLinkProject,
     StyeldLinkCircles,
+    StyeldLinkMobile,
     Footer,
 }
 
@@ -381,5 +398,6 @@ export default {
     StyeldLinkContact,
     StyeldLinkProject,
     StyeldLinkCircles,
+    StyeldLinkMobile,
     Footer,
 }

@@ -9,6 +9,9 @@ import SettingsIcon from "../icons/SettingsIcon";
 import FolderIcon from "../icons/FolderIcon";
 import VcsIcon from "../icons/VcsIcon";
 import ModuleIcon from "../icons/Module";
+import MobileHomeIcon from "../icons/MobileHomeIcon";
+import MobileProjectIcon from "../icons/MobileProjectIcon";
+import MobileContactIcon from "../icons/MobileContactIcon";
 
 
 const AppLayout = ({children}) => {
@@ -23,14 +26,14 @@ const AppLayout = ({children}) => {
     )
 }
 
-function ThemeToggle({ toggle, mode }) {
-
+function ThemeToggle({toggle, mode}) {
     return (
         <ToggleWrapper onClick={toggle} modes={mode}>
             {mode === 'dark' ? '🌚' : '🌝'}
         </ToggleWrapper>
     );
 }
+
 const ToggleWrapper = styled.button`
   position: fixed;
   z-index: 999999;
@@ -47,9 +50,9 @@ const ToggleWrapper = styled.button`
   height: 48px;
   border-radius: 30px;
   box-shadow: ${
-    props => props.mode === 'dark' ? '0px 5px 10px rgba(40, 40, 40, 1), 0px 2px 4px rgba(40, 40, 40, 1)'
-        : '0 5px 10px rgba(100, 100, 100, 0.15), 0 2px 4px rgba(100, 100, 100, 0.15)'
-}
+          props => props.mode === 'dark' ? '0px 5px 10px rgba(40, 40, 40, 1), 0px 2px 4px rgba(40, 40, 40, 1)'
+                  : '0 5px 10px rgba(100, 100, 100, 0.15), 0 2px 4px rgba(100, 100, 100, 0.15)'
+  }
 `;
 
 const Layout = () => {
@@ -59,30 +62,39 @@ const Layout = () => {
         <>
             <ThemeProvider>
                 <AppLayout/>
-                <GlobalStyle />
+                <GlobalStyle/>
                 <Styles.Header>
                     <div style={{display: 'flex'}}>
                         <div className="linkCircles_wrap">
                             <Styles.StyeldLinkCircles to='/' className="close"><img src={'/img/icons/close_icon.png'}/></Styles.StyeldLinkCircles>
-                            <Styles.StyeldLinkCircles  className="hide"></Styles.StyeldLinkCircles>
-                            <Styles.StyeldLinkCircles  className="full_screen"></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles className="hide"></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles className="full_screen"></Styles.StyeldLinkCircles>
                         </div>
                         <div className="user">
-                            <img className="initial" src={'/img/icons/user_initial_blue.png'} />
+                            <img className="initial" src={'/img/icons/user_initial_blue.png'}/>
                             byung_hyun_portfolio
                         </div>
                         <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>
                             <VcsIcon/>
-                            {/*<img className="initial" src={'/img/icons/repo_icon.png'} />*/}
                             main
                         </a>
                     </div>
-                    <SettingsIcon className="settings" />
+                    <SettingsIcon className="settings"/>
                 </Styles.Header>
                 <div style={{display: 'flex', height: 'calc(100vh - 80px)'}}>
                     <Styles.Sidebar>
                         <div className="project_wrap">
-                            <FolderIcon className="initial"/>
+                            <div className="mobileIcon_wrap">
+                                <Styles.StyeldLinkMobile to='/Portfolio' className={this_pathName === "/Portfolio" ? "active" : ""}>
+                                    <MobileHomeIcon />
+                                </Styles.StyeldLinkMobile>
+                                <Styles.StyeldLinkMobile to='/Portfolio/Project' className={this_pathName === "/Portfolio/Project" ? "active" : ""}>
+                                    <MobileProjectIcon />
+                                </Styles.StyeldLinkMobile>
+                                <Styles.StyeldLinkMobile to='/Portfolio/Contact' className={this_pathName === "/Portfolio/Contact" ? "active" : ""}>
+                                    <MobileContactIcon />
+                                </Styles.StyeldLinkMobile>
+                            </div>
                             <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>
                                 <VcsIcon className="repo"/>
                             </a>
@@ -95,7 +107,7 @@ const Layout = () => {
                                     <ModuleIcon className="module_icon"/>
                                     byung_hyun_portfolio
                                 </div>
-                                <div className="root" style={{paddingLeft: "22px"}}>
+                                <div className="root" style={{marginLeft: "25px"}}>
                                     <img className="arrow_down" src={'/img/icons/arrow_down_icon.png'}/>
                                     <FolderIcon className="initial"/>
                                     {/*<img className="module_icon" src={'/img/icons/export_icon.png'}/>*/}

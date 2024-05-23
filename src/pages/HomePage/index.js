@@ -29,24 +29,29 @@ function HomePage() {
                         <div className="tags">
                             <Tag name='Typescript' />
                             <Tag name='Javascript' />
+                            <Tag name='Styled-Component' />
                         </div>
                     </div>
                     <div className="skill">
                         <div className="title">
-                            Language
+                            Framework
                         </div>
                         <div className="tags">
-                            <Tag name='Typescript' />
-                            <Tag name='Javascript' />
+                            <Tag name='React' />
+                            <Tag name='Next.js' />
+                            <Tag name='Node.js' />
                         </div>
                     </div>
                     <div className="skill">
                         <div className="title">
-                            Language
+                            tool
                         </div>
                         <div className="tags">
-                            <Tag name='Typescript' />
-                            <Tag name='Javascript' />
+                            <Tag name='Github' />
+                            <Tag name='Jira' />
+                            <Tag name='Figma' />
+                            <Tag name='Notion' />
+                            <Tag name='Slack' />
                         </div>
                     </div>
                 </div>

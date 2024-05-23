@@ -2,7 +2,7 @@ import Tag from "../../../../components/Tag";
 import React from "react";
 
 const ProjectCard = ({project}) => {
-    console.log(project)
+
     return(
         <div className="item">
             <img src={project.thumbnail} />

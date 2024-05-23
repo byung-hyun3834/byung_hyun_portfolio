@@ -16,29 +16,23 @@ const Container = styled.div`
   & .item{
     border-radius: 5px;
     overflow: hidden;
-    
     background: ${props => props.theme.bgColor};
+    & img{
+      display: block;
+    }
     & .wrap{
       padding: 13px 13px 30px 13px;
     }
     & .title{
       font-size: 20px;
+      font-weight: 600;
     }
     & .description{
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 16px;
     }
     & .tags{
       margin-top: 20px;
-      & .tag{
-        //color: #4493F8;
-        //background: #143C59;
-        //padding: 4px 15px;
-        //border-radius: 50px;
-        //margin-right: 10px;
-        //margin-bottom: 10px;
-        //display: inline-block;
-      }
     }
     & .button_group{
       display: inline-flex;
