@@ -1,7 +1,7 @@
 import {Routes, Route, useLocation, Link} from 'react-router-dom';
 import Styles, {StyeldLinkTab, StyeldLinkRoot} from './styles'
 import Pages from "pages";
-import React from "react";
+import React, {useState} from "react";
 import {ThemeProvider, useTheme} from "../../context";
 import {GlobalStyle} from '../../theme/GlobalStyle'
 import styled from "styled-components";
@@ -12,27 +12,12 @@ import ModuleIcon from "../icons/Module";
 import MobileHomeIcon from "../icons/MobileHomeIcon";
 import MobileProjectIcon from "../icons/MobileProjectIcon";
 import MobileContactIcon from "../icons/MobileContactIcon";
+import SettingModal from "../SettingModal";
 
 
-const AppLayout = ({children}) => {
-    const [ThemeMode, toggleTheme] = useTheme();
 
-    return (
-        <>
-            <ThemeToggle toggle={toggleTheme} mode={ThemeMode}>
-                DarkMode
-            </ThemeToggle>
-        </>
-    )
-}
 
-function ThemeToggle({toggle, mode}) {
-    return (
-        <ToggleWrapper onClick={toggle} modes={mode}>
-            {mode === 'dark' ? '🌚' : '🌝'}
-        </ToggleWrapper>
-    );
-}
+
 
 const ToggleWrapper = styled.button`
   position: fixed;
@@ -58,10 +43,24 @@ const ToggleWrapper = styled.button`
 const Layout = () => {
     const loacation = useLocation();
     const this_pathName = loacation.pathname;
+
+    const [modalVisible, setModalVisible] = useState(false)
+
+    const openModal = () => {
+        console.log('asdfsdf')
+        setModalVisible(true)
+    }
+    const closeModal = () => {
+        setModalVisible(false)
+    }
+    console.log(modalVisible)
     return (
         <>
             <ThemeProvider>
-                <AppLayout/>
+                {
+                    modalVisible && <SettingModal onClose={closeModal} />
+                }
+                {/*<AppLayout/>*/}
                 <GlobalStyle/>
                 <Styles.Header>
                     <div style={{display: 'flex'}}>
@@ -79,20 +78,24 @@ const Layout = () => {
                             main
                         </a>
                     </div>
-                    <SettingsIcon className="settings"/>
+
+                    <SettingsIcon className="settings" onClick={openModal}  />
                 </Styles.Header>
                 <div style={{display: 'flex', height: 'calc(100vh - 80px)'}}>
                     <Styles.Sidebar>
                         <div className="project_wrap">
                             <div className="mobileIcon_wrap">
-                                <Styles.StyeldLinkMobile to='/Portfolio' className={this_pathName === "/Portfolio" ? "active" : ""}>
-                                    <MobileHomeIcon />
+                                <Styles.StyeldLinkMobile to='/Portfolio'
+                                                         className={this_pathName === "/Portfolio" ? "active" : ""}>
+                                    <MobileHomeIcon/>
                                 </Styles.StyeldLinkMobile>
-                                <Styles.StyeldLinkMobile to='/Portfolio/Project' className={this_pathName === "/Portfolio/Project" ? "active" : ""}>
-                                    <MobileProjectIcon />
+                                <Styles.StyeldLinkMobile to='/Portfolio/Project'
+                                                         className={this_pathName === "/Portfolio/Project" ? "active" : ""}>
+                                    <MobileProjectIcon/>
                                 </Styles.StyeldLinkMobile>
-                                <Styles.StyeldLinkMobile to='/Portfolio/Contact' className={this_pathName === "/Portfolio/Contact" ? "active" : ""}>
-                                    <MobileContactIcon />
+                                <Styles.StyeldLinkMobile to='/Portfolio/Contact'
+                                                         className={this_pathName === "/Portfolio/Contact" ? "active" : ""}>
+                                    <MobileContactIcon/>
                                 </Styles.StyeldLinkMobile>
                             </div>
                             <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>

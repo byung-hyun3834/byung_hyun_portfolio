@@ -21,10 +21,11 @@ const LightIcon = () => {
 }
 
 
-const SettingsIcon = () => {
+const SettingsIcon = (props) => {
+
     const [ThemeMode] = useTheme();
     return (
-        <>
+        <div onClick={props.onClick}>
             {
                 ThemeMode === 'dark' ?
                     <DarkIcon/>
@@ -32,7 +33,7 @@ const SettingsIcon = () => {
                     <LightIcon/>
             }
 
-        </>
+        </div>
     )
 }
 
