@@ -19,10 +19,21 @@ const AppLayout = ({children}) => {
 }
 
 function ThemeToggle({toggle, mode}) {
+    console.log(mode)
     return (
         <Styles.ThemeToggleContainer onClick={toggle} modes={mode}>
-            <div className="item"><ThemeDark/></div>
-            <div className="item"><ThemeLight/></div>
+            <div className="item">
+                <div className={`icon ${mode === 'dark' ? 'active' : ''}`}>
+                    <ThemeDark/>
+                </div>
+                Dark
+            </div>
+            <div className="item">
+                <div className={`icon ${mode === 'light' ? 'active' : ''}`}>
+                    <ThemeLight/>
+                </div>
+                Light
+            </div>
         </Styles.ThemeToggleContainer>
     );
 }
@@ -37,7 +48,7 @@ const SettingModal = ({onClose}) => {
 
     return (
         <Styles.SettingModal>
-            <div className="overlay"></div>
+            <div className="overlay" onClick={close}></div>
             <div className="modal_wrap">
                 <div className="header">
                     <div className="linkCircles_wrap">
@@ -45,13 +56,15 @@ const SettingModal = ({onClose}) => {
                         <div className="circles hide"></div>
                         <div className="circles full_screen"></div>
                     </div>
-                    <div>Settings</div>
+                    <div className="title">Settings</div>
                 </div>
+                <div className="rootInfo">Appearance & behavior > Appearance</div>
 
-                <div>Appearance & behavior > Appearance</div>
-                <AppLayout/>
-                <div className="item">
-
+                <div className="setTheme">
+                    <div className="title">
+                       Theme :
+                    </div>
+                    <AppLayout/>
                 </div>
             </div>
         </Styles.SettingModal>

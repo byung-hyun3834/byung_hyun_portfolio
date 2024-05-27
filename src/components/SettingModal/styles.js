@@ -17,8 +17,7 @@ const SettingModal = styled.div`
   }
   & .modal_wrap{
     position: fixed;
-    width: 500px;
-    height: 250px;
+    width: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -26,9 +25,30 @@ const SettingModal = styled.div`
     z-index: 100;
     border: 1px solid #77797A;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 10px 40px 10px;
     & .header{
-      
+      position: relative;
+      & .title{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        color: #9FA0A2;
+        z-index: -1;
+      }
+    }
+    & .rootInfo{
+      margin-top: 25px;
+      font-weight: 600;
+    }
+    & .setTheme{
+      display: flex;
+      margin-top: 20px;
+      & .title{
+       margin-right: 20px; 
+      }
     }
   }
   & .linkCircles_wrap{
@@ -73,12 +93,23 @@ const SettingModal = styled.div`
 
 const ThemeToggleContainer = styled.div`
   display: flex;
-  gap: 50px;
-  margin-top: 50px;
+  gap: 30px;
   justify-content: center;
   & .item{
-    border: 1px solid red;
-    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: ${props => props.theme.iconColor};
+    & .icon{
+      width: 50px;
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      
+      &.active{
+        background: ${props => props.theme.activeColor};
+      }
+    }
+    
   }
 `
 

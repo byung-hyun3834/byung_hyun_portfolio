@@ -2,7 +2,7 @@ export const darkTheme = {
     userInitialColor:'rgba(78, 146, 233, 0.54)',
     bgColor: '#2A2C2F',
     contentBgColor:'#1E1F22',
-    textColor: '#fff',
+    textColor: '#DFE1E5',
     borderColor: '#000',
     sectionBorderColor:'#525e6b',
     activeColor: '#5E5E5E',
@@ -11,6 +11,7 @@ export const darkTheme = {
     inputBorder: '#7c828d',
     skillTitleColor:'#19e571',
     skillTextColor:'#21b481',
+    iconColor: '#CED0D6',
 }
 export const lightTheme = {
     userInitialColor:'rgba(128, 184, 255, 0.54)',
@@ -25,6 +26,7 @@ export const lightTheme = {
     inputBorder: '#bbc4d5',
     skillTitleColor:'#2ba65e',
     skillTextColor: '#1a815e',
+    iconColor: '#6C707E',
 }
 export const theme = {
     darkTheme,
