@@ -81,7 +81,7 @@ const Form = styled.form`
 
     & .emailForm {
       width: 100%;
-
+      flex: 1;
       &:first-child {
         display: flex;
         flex-direction: column;
@@ -103,6 +103,8 @@ const Form = styled.form`
           border: none;
           border-bottom: 2px solid ${props => props.theme.inputBorder};
           padding: 3px;
+          width: 100%;
+          box-sizing: border-box;
           &:focus {
             outline: none;
             border-bottom: 2px solid #4493F8;
@@ -115,6 +117,7 @@ const Form = styled.form`
           resize: none;
           border: 2px solid ${props => props.theme.inputBorder};
           background: transparent;
+          box-sizing: border-box;
           &:focus {
             outline: none;
             border: 2px solid #4493F8;
@@ -130,6 +133,11 @@ const Form = styled.form`
         color: #fff;
         background: #4A88C7;
       }
+    }
+  }
+  @media (max-width: 768px) {
+    & .emailFormWrap{
+      flex-direction: column;
     }
   }
 `

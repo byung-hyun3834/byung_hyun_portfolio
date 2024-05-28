@@ -32,7 +32,9 @@ function MainPage() {
         <Styles.MainContainer>
             <IjModal open={open}/>
             <Styles.Header>
-                <img className="initial" src={'/img/icons/user_ initial.png'}/>byung_hyun_portfolio
+                <img className="initial" src={'/img/icons/user_ initial.png'}/>
+                <span>byung_hyun_portfolio</span>
+
             </Styles.Header>
             <Styles.StyeldLink onClick={handleClick}>
                 <img src={'/img/icons/ij_icon.png'}/>

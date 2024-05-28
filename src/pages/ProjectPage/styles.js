@@ -9,7 +9,7 @@ const Container = styled.div`
   & .list_wrap{
     margin-top: 55px;
     display: grid;
-    grid-template-columns:  repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
     grid-column-gap: 30px;
     grid-row-gap: 50px;
   }
@@ -48,6 +48,11 @@ const Container = styled.div`
           background: #4FC921; /* 두 번째 버튼에만 다른 색상 적용 */
         }
       }
+    }
+  }
+  @media (max-width: 768px) {
+    & .list_wrap{
+      grid-template-columns: repeat(1,1fr);
     }
   }
 `

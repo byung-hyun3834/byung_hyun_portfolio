@@ -15,31 +15,6 @@ import MobileContactIcon from "../icons/MobileContactIcon";
 import SettingModal from "../SettingModal";
 
 
-
-
-
-
-const ToggleWrapper = styled.button`
-  position: fixed;
-  z-index: 999999;
-  bottom: 4%;
-  right: 3%;
-  background-color: ${props => props.theme.bgColor};
-  border: ${props => props.theme.borderColor};
-  color: ${props => props.modes === 'light' ? '#31302E' : '#bbb'};
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 96px;
-  height: 48px;
-  border-radius: 30px;
-  box-shadow: ${
-          props => props.mode === 'dark' ? '0px 5px 10px rgba(40, 40, 40, 1), 0px 2px 4px rgba(40, 40, 40, 1)'
-                  : '0 5px 10px rgba(100, 100, 100, 0.15), 0 2px 4px rgba(100, 100, 100, 0.15)'
-  }
-`;
-
 const Layout = () => {
     const loacation = useLocation();
     const this_pathName = loacation.pathname;
@@ -71,7 +46,7 @@ const Layout = () => {
                         </div>
                         <div className="user">
                             <img className="initial" src={'/img/icons/user_initial_blue.png'}/>
-                            byung_hyun_portfolio
+                            <span>byung_hyun_portfolio</span>
                         </div>
                         <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>
                             <VcsIcon/>

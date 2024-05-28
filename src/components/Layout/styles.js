@@ -22,7 +22,6 @@ const Header = styled.div`
     display: flex;
     align-items: center;
     margin-right: 82px;
-
     & img {
       color: rgb(78 146 233 / 54%);
       box-shadow: 30px 0 100px 150px ${props => props.theme.userInitialColor};
@@ -64,6 +63,20 @@ const Header = styled.div`
       }
     }
   }
+  @media (max-width: 600px) {
+    & .user{
+      margin-right: 0;
+      & span{
+        width: 70px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+    & .repo{
+      display: none;
+    }
+  }
 `
 
 const Sidebar = styled.div`
@@ -94,6 +107,12 @@ const Sidebar = styled.div`
     & .repo {
       width: 20px;
       height: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    width: auto;
+    & .project_wrap{
+      border-right: none;
     }
   }
 `
@@ -129,11 +148,14 @@ const SidebarRoot = styled.div`
     
   }
   
-
   & .module_icon {
     width: 20px;
     height: 20px;
     
+  }
+
+  @media (max-width: 600px) {
+    display: none;
   }
 `
 
@@ -147,10 +169,14 @@ const Contents = styled.div`
   overflow: hidden;
 
   & .tabs {
+    overflow: auto;
     height: 45px;
     display: flex;
     flex-shrink: 0;
     border-bottom: 1px solid ${props => props.theme.borderColor};
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
+    }
   }
 
   & .container {
@@ -159,7 +185,7 @@ const Contents = styled.div`
     box-sizing: border-box;
 
     & .container_wrap {
-      padding: 60px;
+      padding: 35px;
       max-width: 820px;
     }
   }
@@ -224,7 +250,7 @@ const Contents = styled.div`
 
       & .skill {
         display: flex;
-        align-items: center;
+        align-items: baseline;
 
         & .title {
           font-size: 16px;
@@ -234,7 +260,7 @@ const Contents = styled.div`
         }
 
         & .tags {
-          display: flex;
+          //display: flex;
         }
       }
 
@@ -272,6 +298,18 @@ const Contents = styled.div`
 
     & .title {
       font-size: 36px;
+    }
+  }
+  @media (max-width: 900px) {
+    & .section_01 {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 768px) {
+    & .container {
+      & .container_wrap {
+        padding: 30px;
+      }
     }
   }
 `
@@ -313,6 +351,9 @@ const StyeldLinkContact = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 900px) {
+    
+  }
 `
 
 const StyeldLinkRoot = styled(Link)`
