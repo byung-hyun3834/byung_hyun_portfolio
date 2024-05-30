@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
 const Container = styled.div`
-  
-  max-width: 820px;
+  padding: 35px;
+  max-width: 1200px;
   & .pageTitle{
     font-size: 48px;
     font-weight: bold;
@@ -9,14 +9,15 @@ const Container = styled.div`
   & .list_wrap{
     margin-top: 55px;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 50px;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 40px;
   }
   & .item{
     border-radius: 5px;
     overflow: hidden;
-    background: ${props => props.theme.bgColor};
+    background: ${props => props.theme.projectBgColor};
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
     & img{
       display: block;
     }
@@ -24,12 +25,13 @@ const Container = styled.div`
       padding: 13px 13px 30px 13px;
     }
     & .title{
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
     }
     & .description{
       margin-top: 20px;
-      font-size: 16px;
+      font-size: 14px;
+      line-height: 1.2;
     }
     & .tags{
       margin-top: 20px;
@@ -45,9 +47,14 @@ const Container = styled.div`
         border: 0;
         padding: 8px 20px;
         &:nth-child(2) {
-          background: #4FC921; /* 두 번째 버튼에만 다른 색상 적용 */
+          background: #4FC921;
         }
       }
+    }
+  }
+  @media (max-width: 960px) {
+    & .list_wrap{
+      grid-template-columns: repeat(2,1fr);
     }
   }
   @media (max-width: 768px) {

@@ -7,7 +7,6 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
   color: ${props => props.theme.textColor};
   //background: #2A2C2F;
   background: ${props => props.theme.bgColor};
@@ -109,7 +108,7 @@ const Sidebar = styled.div`
       height: 20px;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     width: auto;
     & .project_wrap{
       border-right: none;
@@ -214,7 +213,7 @@ const Contents = styled.div`
     & img {
       display: block;
       width: 200px;
-      height: 200px;
+      
     }
 
 
@@ -222,11 +221,20 @@ const Contents = styled.div`
 
   & .section_02 {
     margin-top: 46px;
-    padding: 20px 35px;
+    padding: 10px 20px 30px;
     font-weight: 500;
     line-height: 1.4;
+    border-left: 5px solid #4A88C7;
     background: ${props => props.theme.bgColor};
     color: ${props => props.theme.textColor};
+    & .title{
+      color: #4A88C7;
+      font-size: 24px;
+    }
+    & .text{
+      font-size: 16px;
+      margin-top: 20px;
+    }
   }
 
   & .skills {
@@ -291,6 +299,19 @@ const Contents = styled.div`
         margin-top: 20px;
       }
     }
+    & .more_info{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px auto 0;
+      width: fit-content;
+      padding: 5px 10px;
+      border: 2px solid ${props => props.theme.sectionBorderColor};
+      & .icon{
+        width: 30px;
+        height: 30px;
+      }
+    }
   }
 
   & .Project {
@@ -303,6 +324,11 @@ const Contents = styled.div`
   @media (max-width: 900px) {
     & .section_01 {
       flex-direction: column;
+      & img{
+        margin-top: 40px;
+        margin-left: auto;
+        width: 100px;
+      }
     }
   }
   @media (max-width: 768px) {
@@ -318,23 +344,23 @@ const StyeldLinkCircles = styled(Link)`
   width: 19px;
   height: 19px;
   border-radius: 50px;
-  background: red;
   display: flex;
   align-items: center;
   justify-content: center;
+  ${props => console.log(props)}
   &.close {
-    background: #ED6A5F;
+    background: ${props => props.modalVisible ? props.theme.activeColor : '#ED6A5F'};
     & img{
       width: 13px;
     }
   }
 
   &.hide {
-    background: #FFBB2E;
+    background: ${props => props.modalVisible ? props.theme.activeColor : '#FFBB2E'};
   }
 
   &.full_screen {
-    background: #61C454;
+    background: ${props => props.modalVisible ? props.theme.activeColor : '#61C454'};
   }
 `
 const StyeldLinkContact = styled(Link)`
@@ -351,8 +377,17 @@ const StyeldLinkContact = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
+  &.mobile{
+    display: none;
+    margin-left: auto;
+  }
   @media (max-width: 900px) {
-    
+    display: none;
+    position: unset;
+    margin-top: 20px;
+    &.mobile{
+      display: flex;
+    }
   }
 `
 

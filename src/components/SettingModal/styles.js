@@ -2,8 +2,8 @@ import styled, {css} from 'styled-components';
 import {Link} from "react-router-dom";
 
 const SettingModal = styled.div`
-  & .overlay{
-    background: #000;
+  & .overlay {
+    background: rgba(0, 0, 0, 0.35);
     bottom: 0;
     height: 100%;
     left: 0;
@@ -15,20 +15,22 @@ const SettingModal = styled.div`
     width: 100%;
     z-index: 99;
   }
-  & .modal_wrap{
+
+  & .modal_wrap {
     position: fixed;
-    width: 400px;
-    top: 50%;
+    width: 80%;
+    max-width: 350px;
+    top: 25%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     background: ${props => props.theme.bgColor};
     z-index: 100;
     border: 1px solid #77797A;
     border-radius: 10px;
     padding: 10px 10px 40px 10px;
-    & .header{
+    & .header {
       position: relative;
-      & .title{
+      & .title {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -39,31 +41,37 @@ const SettingModal = styled.div`
         z-index: -1;
       }
     }
-    & .rootInfo{
+
+    & .rootInfo {
       margin-top: 25px;
       font-weight: 600;
     }
-    & .setTheme{
+
+    & .setTheme {
       display: flex;
       margin-top: 20px;
-      & .title{
-       margin-right: 20px; 
+
+      & .title {
+        margin-right: 50px;
       }
     }
   }
-  & .linkCircles_wrap{
+
+  & .linkCircles_wrap {
     display: flex;
     gap: 12px;
-    & img{
+
+    & img {
       opacity: 0;
     }
-    &:hover{
-      & img{
+
+    &:hover {
+      & img {
         opacity: 0.8;
       }
     }
-    
-    & .circles{
+
+    & .circles {
       width: 19px;
       height: 19px;
       border-radius: 50px;
@@ -71,9 +79,12 @@ const SettingModal = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      background: ${props => props.theme.activeColor};
+
       &.close {
         background: #ED6A5F;
-        & img{
+
+        & img {
           width: 13px;
         }
       }

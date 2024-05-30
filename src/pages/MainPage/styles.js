@@ -11,12 +11,22 @@ const Header = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   color: #fff;
-  background: rgba(217, 217, 217, 0.5);
+  backdrop-filter: blur(10px);
+  background: rgba(141, 141, 141, 0.5);
   padding: 0 40px;
-  & .initial{
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.33);
+
+  & .initial {
     width: 20px;
     margin-right: 20px;
+  }
+
+  & .user_info {
+    display: flex;
+    align-items: center;
+
   }
 `
 
@@ -33,6 +43,8 @@ const StyeldLink = styled.div`
   color: #fff;
   font-size: 25px;
   font-weight: bold;
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.83);
+
   & img {
     max-width: 200px;
     max-height: 200px;

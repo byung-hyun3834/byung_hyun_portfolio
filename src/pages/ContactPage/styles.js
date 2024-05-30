@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  max-width: 820px;
-
   & .pageTitle {
     font-size: 48px;
     font-weight: bold;
@@ -50,9 +48,11 @@ const Container = styled.div`
       }
 
       & a {
-        text-decoration: underline;
         text-underline-offset: .3rem;
         color: #4493F8;
+        &:hover{
+          text-decoration: underline;  
+        }
       }
     }
   }

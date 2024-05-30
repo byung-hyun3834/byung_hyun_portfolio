@@ -22,13 +22,13 @@ const Layout = () => {
     const [modalVisible, setModalVisible] = useState(false)
 
     const openModal = () => {
-        console.log('asdfsdf')
+
         setModalVisible(true)
     }
     const closeModal = () => {
         setModalVisible(false)
     }
-    console.log(modalVisible)
+
     return (
         <>
             <ThemeProvider>
@@ -40,9 +40,9 @@ const Layout = () => {
                 <Styles.Header>
                     <div style={{display: 'flex'}}>
                         <div className="linkCircles_wrap">
-                            <Styles.StyeldLinkCircles to='/' className="close"><img src={'/img/icons/close_icon.png'}/></Styles.StyeldLinkCircles>
-                            <Styles.StyeldLinkCircles className="hide"></Styles.StyeldLinkCircles>
-                            <Styles.StyeldLinkCircles className="full_screen"></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles to='/' className="close" modalVisible={modalVisible} ><img src={'/img/icons/close_icon.png'}/></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles className="hide" modalVisible={modalVisible} ></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles className="full_screen" modalVisible={modalVisible} ></Styles.StyeldLinkCircles>
                         </div>
                         <div className="user">
                             <img className="initial" src={'/img/icons/user_initial_blue.png'}/>
@@ -126,13 +126,13 @@ const Layout = () => {
                             </StyeldLinkTab>
                         </div>
                         <div className="container">
-                            <div className="container_wrap">
+
                                 <Routes>
                                     <Route path="/" element={<Pages.HomePage/>}/>
                                     <Route path="/Project" element={<Pages.ProjectPage/>}/>
                                     <Route path="/Contact" element={<Pages.ContactPage/>}/>
                                 </Routes>
-                            </div>
+
                         </div>
                     </Styles.Contents>
                 </div>
