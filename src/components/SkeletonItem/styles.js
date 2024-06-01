@@ -20,10 +20,22 @@ const SkeletonLayout = styled.div`
   width: 100%;
   & .skeleton_img{
     width: 100%;
-    min-height: 175px;
-    background: linear-gradient(90deg, ${props => props.theme.skeletonBaseColor}, ${props => props.theme.skeletonColor}, ${props => props.theme.skeletonBaseColor});
-    background-size: 200% 100%;
-    animation: ${loadingAnimation} 1.5s infinite;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-top: 66.5%;
+    & .skeleton_img_inner{
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      // width: 100%;
+      // min-height: 175px;
+       background: linear-gradient(90deg, ${props => props.theme.skeletonBaseColor}, ${props => props.theme.skeletonColor}, ${props => props.theme.skeletonBaseColor});
+       background-size: 200% 100%;
+       animation: ${loadingAnimation} 1.5s infinite;  
+    }
   }
   & .HeaderContainer{
     display: flex;
@@ -35,12 +47,15 @@ const SkeletonLayout = styled.div`
     padding: 13px 13px 30px 13px;
     & .description{
       margin-top: 20px;
+      height: 16.8px;
     }
     & .tag{
       margin-top: 20px;
+      height: 24px;
     }
     & .button_group{
-      margin-top: 30px;
+      margin-top: 40px;
+      height: 31px;
     }
   }
   

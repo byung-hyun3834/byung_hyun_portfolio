@@ -19,9 +19,9 @@ const AppLayout = ({children}) => {
 }
 
 function ThemeToggle({toggle, mode}) {
-    console.log(mode)
+
     return (
-        <Styles.ThemeToggleContainer onClick={toggle} modes={mode}>
+        <Styles.ThemeToggleContainer onClick={toggle} $modes={mode}>
             <div className="item">
                 <div className={`icon ${mode === 'dark' ? 'active' : ''}`}>
                     <ThemeDark/>

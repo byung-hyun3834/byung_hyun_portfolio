@@ -10,7 +10,9 @@ import React from "react";
 const SkeletonItem = () => {
     return (
         <Styles.SkeletonLayout>
-            <div className="skeleton_img"></div>
+            <div className="skeleton_img">
+                <div className="skeleton_img_inner"></div>
+            </div>
             <div className="wrap">
                 <Styles.SkeletonSpan className="title" width="40%" height="18px"></Styles.SkeletonSpan>
                 <Styles.SkeletonSpan className="description" width="60%" height="20px"></Styles.SkeletonSpan>

@@ -347,7 +347,6 @@ const StyeldLinkCircles = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  ${props => console.log(props)}
   &.close {
     background: ${props => props.modalVisible ? props.theme.activeColor : '#ED6A5F'};
     & img{

@@ -16,7 +16,7 @@ function ProjectPage() {
             setProject(result.data)
             setTimeout(() => {
                 setIsLoading(true);
-            }, 2500);
+            }, 1500);
         }catch (error){
             console.log('Data load failed:'+ error);
         }
@@ -32,7 +32,7 @@ function ProjectPage() {
                 Project 💻
             </div>
             <div className="list_wrap">
-                <SkeletonItem/>
+
                 { !isLoading && new Array(10).fill(1).map((_, i) => <SkeletonItem key={i}/>)
                 }
                 {

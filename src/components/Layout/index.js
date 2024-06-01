@@ -40,9 +40,10 @@ const Layout = () => {
                 <Styles.Header>
                     <div style={{display: 'flex'}}>
                         <div className="linkCircles_wrap">
-                            <Styles.StyeldLinkCircles to='/' className="close" modalVisible={modalVisible} ><img src={'/img/icons/close_icon.png'}/></Styles.StyeldLinkCircles>
-                            <Styles.StyeldLinkCircles className="hide" modalVisible={modalVisible} ></Styles.StyeldLinkCircles>
-                            <Styles.StyeldLinkCircles className="full_screen" modalVisible={modalVisible} ></Styles.StyeldLinkCircles>
+
+                            <Styles.StyeldLinkCircles to='/' className="close" $modalVisible={modalVisible} ><img src={'/img/icons/close_icon.png'}/></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles className="hide" $modalVisible={modalVisible} ></Styles.StyeldLinkCircles>
+                            <Styles.StyeldLinkCircles className="full_screen" $modalVisible={modalVisible} ></Styles.StyeldLinkCircles>
                         </div>
                         <div className="user">
                             <img className="initial" src={'/img/icons/user_initial_blue.png'}/>

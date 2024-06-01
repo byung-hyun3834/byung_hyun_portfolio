@@ -18,7 +18,7 @@ const Email = () =>{
                 form.current.reset();
             },
             error => {
-                console.log(error.text);
+
                 alert("이메일이 전송이 실패되었습니다.");
             },
         );

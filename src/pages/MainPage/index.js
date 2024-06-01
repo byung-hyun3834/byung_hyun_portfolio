@@ -18,18 +18,19 @@ const IjModal = ({open}) => {
     )
 }
 
-function MainPage() {
-    const [open, setOpen] = useState(false);
+function MainPage({iconRun, setIconRun}) {
+    const [hasAnimated, setHasAnimated] = useState(false);
     const navigate = useNavigate();
 
     const handleClick = () => {
         setOpen(true);
+        setIconRun(true);
         setTimeout(() => {
             navigate('/Portfolio');
         }, 2000); // 3초 지연
     };
 
-    console.log(open)
+    console.log('open', open)
 
     return (
         <Styles.MainContainer>
@@ -46,11 +47,15 @@ function MainPage() {
                 Portfolio
             </Styles.StyeldLink>
             {
-                open &&
-                <Styles.Dock>
+                iconRun &&
+                <Styles.Dock open={open}>
                     <div className="dockIcon">
-                        <img src="/img/icons/ij_icon.png"/>
+                        <Link to="/Portfolio">
+                            <div className="name">Portfolio</div>
+                            <img src="/img/icons/ij_icon.png"/>
+                        </Link>
                     </div>
+                    <div className="run"></div>
                 </Styles.Dock>
             }
 
