@@ -348,18 +348,18 @@ const StyeldLinkCircles = styled(Link)`
   align-items: center;
   justify-content: center;
   &.close {
-    background: ${props => props.modalVisible ? props.theme.activeColor : '#ED6A5F'};
+    background: ${props => props.$modalVisible ? props.theme.activeColor : '#ED6A5F'};
     & img{
       width: 13px;
     }
   }
 
   &.hide {
-    background: ${props => props.modalVisible ? props.theme.activeColor : '#FFBB2E'};
+    background: ${props => props.$modalVisible ? props.theme.activeColor : '#FFBB2E'};
   }
 
   &.full_screen {
-    background: ${props => props.modalVisible ? props.theme.activeColor : '#61C454'};
+    background: ${props => props.$modalVisible ? props.theme.activeColor : '#61C454'};
   }
 `
 const StyeldLinkContact = styled(Link)`

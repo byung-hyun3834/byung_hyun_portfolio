@@ -19,7 +19,7 @@ const IjModal = ({open}) => {
 }
 
 function MainPage({iconRun, setIconRun}) {
-    const [hasAnimated, setHasAnimated] = useState(false);
+    const [open, setOpen] = useState(false)
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -30,7 +30,7 @@ function MainPage({iconRun, setIconRun}) {
         }, 2000); // 3초 지연
     };
 
-    console.log('open', open)
+
 
     return (
         <Styles.MainContainer>
