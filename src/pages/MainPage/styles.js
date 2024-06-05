@@ -2,12 +2,17 @@ import styled, {css, keyframes} from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const MainContainer = styled.div`
-  width: 100%;
+  background: #13AAE7;
   height: 100vh;
-  background-size: cover;
-  background-image:url("/img/bg/main_bg.jpg");
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 `
 const Header = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
   height: 40px;
   display: flex;
   align-items: center;

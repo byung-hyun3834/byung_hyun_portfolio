@@ -2,6 +2,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import Styles, {Dock, MainContainer} from "./styles";
 import React, {useState, useEffect} from "react";
 import CustomDate from "../../components/CustomDate";
+import WaveAnimation from "../../components/Wave/WaveAnimation"
 
 
 const IjModal = ({open}) => {
@@ -34,6 +35,7 @@ function MainPage({iconRun, setIconRun}) {
 
     return (
         <Styles.MainContainer>
+            <WaveAnimation />
             <IjModal open={open}/>
             <Styles.Header>
                 <div className="user_info">

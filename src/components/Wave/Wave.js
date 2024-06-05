@@ -1,17 +1,18 @@
 import { Point } from "./Point.js";
 
 export class Wave {
-    constructor(index, totalPoints, color) {
+    constructor(index, totalPoints, color, startHeight, endHeight) {
         this.index = index;
         this.totalPoints = totalPoints;
         this.color = color;
+        this.startHeight = startHeight;
+        this.endHeight = endHeight;
         this.points = [];
     }
-    resize(stageWidth, stageHegiht) {
+
+    resize(stageWidth, stageHeight) {
         this.stageWidth = stageWidth;
-        this.stageHegiht = stageHegiht;
-        this.centerX = stageWidth / 2;
-        this.centerY = stageHegiht / 2;
+        this.stageHeight = stageHeight;
 
         this.pointGap = this.stageWidth / (this.totalPoints - 1);
 
@@ -20,8 +21,10 @@ export class Wave {
 
     init() {
         this.points = [];
+        const heightDifference = this.endHeight - this.startHeight;
         for (let i = 0; i < this.totalPoints; i++) {
-            const point = new Point(this.index + i, this.pointGap * i, this.centerY);
+            const y = this.startHeight + (heightDifference * i) / (this.totalPoints - 1);
+            const point = new Point(this.index + i, this.pointGap * i, y);
             this.points[i] = point;
         }
     }
@@ -35,7 +38,7 @@ export class Wave {
 
         ctx.moveTo(prevX, prevY);
 
-        for (let i = 0; i < this.totalPoints; i++) {
+        for (let i = 1; i < this.totalPoints; i++) {
             this.points[i].update();
 
             const cx = (prevX + this.points[i].x) / 2;
@@ -46,9 +49,21 @@ export class Wave {
         }
 
         ctx.lineTo(prevX, prevY);
-        ctx.lineTo(this.stageWidth, this.stageHegiht);
-        ctx.lineTo(this.points[0].x, this.stageHegiht);
+        ctx.lineTo(this.stageWidth, this.stageHeight);
+        ctx.lineTo(this.points[0].x, this.stageHeight);
+
+        // 그라데이션 생성 및 적용
+        const gradient = ctx.createLinearGradient(900, 700, 800,  1000);
+        if (typeof this.color === 'string') {
+            ctx.fillStyle = this.color;
+        } else {
+            gradient.addColorStop(0, this.color[0]);
+            gradient.addColorStop(1, this.color[1]);
+            ctx.fillStyle = gradient;
+        }
+
         ctx.fill();
         ctx.closePath();
     }
 }
+
