@@ -53,6 +53,7 @@ const StyeldLink = styled.div`
   & img {
     max-width: 200px;
     max-height: 200px;
+    filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.83));
   }
 `;
 

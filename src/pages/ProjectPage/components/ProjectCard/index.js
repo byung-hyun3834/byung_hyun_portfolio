@@ -5,7 +5,11 @@ const ProjectCard = ({project}) => {
 
     return(
         <div className="item">
-            <img src={project.thumbnail} />
+            <div className="img_wrap">
+                <div className="img_inner">
+                    <img src={project.thumbnail} />
+                </div>
+            </div>
             <div className="wrap">
                 <div className="title">
                     {project.title}

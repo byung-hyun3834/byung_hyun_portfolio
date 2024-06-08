@@ -13,6 +13,7 @@ import MobileHomeIcon from "../icons/MobileHomeIcon";
 import MobileProjectIcon from "../icons/MobileProjectIcon";
 import MobileContactIcon from "../icons/MobileContactIcon";
 import SettingModal from "../SettingModal";
+import JsIcon from "../icons/JsIcon";
 
 
 const Layout = () => {
@@ -89,21 +90,20 @@ const Layout = () => {
                                 <div className="root" style={{marginLeft: "25px"}}>
                                     <img className="arrow_down" src={'/img/icons/arrow_down_icon.png'}/>
                                     <FolderIcon className="initial"/>
-                                    {/*<img className="module_icon" src={'/img/icons/export_icon.png'}/>*/}
                                     src
                                 </div>
                                 <StyeldLinkRoot to='/Portfolio' className={this_pathName == "/Portfolio" && "active"}>
-                                    <img className="module_icon" src={'/img/icons/js_icon.png'}/>
+                                    <JsIcon className="module_icon" />
                                     home.js
                                 </StyeldLinkRoot>
                                 <StyeldLinkRoot to='/Portfolio/Project'
                                                 className={this_pathName == "/Portfolio/Project" && "active"}>
-                                    <img className="module_icon" src={'/img/icons/js_icon.png'}/>
+                                    <JsIcon className="module_icon" />
                                     project.js
                                 </StyeldLinkRoot>
                                 <StyeldLinkRoot to='/Portfolio/Contact'
                                                 className={this_pathName == "/Portfolio/Contact" && "active"}>
-                                    <img className="module_icon" src={'/img/icons/js_icon.png'}/>
+                                    <JsIcon className="module_icon" />
                                     Contact.js
                                 </StyeldLinkRoot>
                             </div>
@@ -112,17 +112,17 @@ const Layout = () => {
                     <Styles.Contents>
                         <div className="tabs">
                             <StyeldLinkTab to='/Portfolio' className={this_pathName == "/Portfolio" && "active"}>
-                                <img className="module_icon" src={'/img/icons/js_icon.png'}/>
+                                <JsIcon className="module_icon" />
                                 home.js
                             </StyeldLinkTab>
                             <StyeldLinkTab to='/Portfolio/Project'
                                            className={this_pathName == "/Portfolio/Project" && "active"}>
-                                <img className="module_icon" src={'/img/icons/js_icon.png'}/>
+                                <JsIcon className="module_icon" />
                                 project.js
                             </StyeldLinkTab>
                             <StyeldLinkTab to='/Portfolio/Contact'
                                            className={this_pathName == "/Portfolio/Contact" && "active"}>
-                                <img className="module_icon" src={'/img/icons/js_icon.png'}/>
+                                <JsIcon className="module_icon" />
                                 Contact.js
                             </StyeldLinkTab>
                         </div>

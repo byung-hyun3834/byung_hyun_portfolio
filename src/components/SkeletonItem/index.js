@@ -1,12 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import Styles, {SkeletonSpan} from "./styles";
 import React from "react";
-
-
-
-
-
-
 const SkeletonItem = () => {
     return (
         <Styles.SkeletonLayout>

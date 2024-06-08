@@ -148,8 +148,7 @@ const SidebarRoot = styled.div`
   }
   
   & .module_icon {
-    width: 20px;
-    height: 20px;
+    margin-right: 5px;
     
   }
 

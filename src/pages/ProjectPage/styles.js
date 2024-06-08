@@ -18,9 +18,20 @@ const Container = styled.div`
     overflow: hidden;
     background: ${props => props.theme.projectBgColor};
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
-    & img{
-      display: block;
+    & .img_wrap{
+      min-height: 120px;
+      & .img_inner{
+        padding-bottom: 100%;
+        position: relative;
+        & img{
+          width: 100%;
+          position: absolute;
+          display: block;
+        }  
+      }
+        
     }
+    
     & .wrap{
       padding: 13px 13px 30px 13px;
     }
@@ -63,6 +74,8 @@ const Container = styled.div`
     }
   }
 `
+
+
 
 export { Container };
 
