@@ -1,14 +1,31 @@
 import Tag from "../../../../components/Tag";
-import React from "react";
+import React, {useEffect, useState} from "react";
+import Styles, {Skeleton} from "./styles";
 
 const ProjectCard = ({project}) => {
+    const { thumbnail, title, description, tags } = project;
+
+
+    const [imgLoaded, setImgLoaded] = useState(false);
+
+    useEffect(() => {
+        const img = new Image();
+        img.src = thumbnail;
+        img.onload = () => setImgLoaded(true);
+    }, [thumbnail])
 
     return(
-        <div className="item">
+        <Styles.Card>
             <div className="img_wrap">
-                <div className="img_inner">
+                { !imgLoaded ?
+                    <Styles.Skeleton>
+                        <div className='inner'></div>
+                    </Styles.Skeleton>
+                    :
+
                     <img src={project.thumbnail} />
-                </div>
+
+                }
             </div>
             <div className="wrap">
                 <div className="title">
@@ -27,7 +44,7 @@ const ProjectCard = ({project}) => {
                     <button>view</button>
                 </div>
             </div>
-        </div>
+        </Styles.Card>
     )
 }
 
