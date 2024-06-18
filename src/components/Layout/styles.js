@@ -8,10 +8,10 @@ const Header = styled.div`
   align-items: center;
   justify-content: space-between;
   color: ${props => props.theme.textColor};
-  //background: #2A2C2F;
+  border-bottom: 1px solid ${props => props.theme.borderColor};
   background: ${props => props.theme.bgColor};
   overflow: hidden;
-  //background: linear-gradient(90deg, rgba(44,46,49,1) 0%, rgba(67,106,166,1) 8%, rgba(67,106,166,1) 23%, rgba(44,46,49,1) 37%);
+  box-sizing: border-box;
   & .window_circles {
     max-width: 81px;
     margin-right: 33px;
@@ -21,7 +21,7 @@ const Header = styled.div`
     display: flex;
     align-items: center;
     margin-right: 82px;
-    & img {
+    & .initial {
       color: rgb(78 146 233 / 54%);
       box-shadow: 30px 0 100px 150px ${props => props.theme.userInitialColor};
       //box-shadow: 30px 0 100px 150px rgb(78 146 233 / 54%);
@@ -81,7 +81,7 @@ const Header = styled.div`
 const Sidebar = styled.div`
   display: flex;
   flex-shrink: 0;
-  width: 270px;
+  width: 235px;
   //color: #fff;
   color: ${props => props.theme.textColor};
   //background: #2A2C2F;
@@ -140,16 +140,10 @@ const SidebarRoot = styled.div`
     align-items: center;
     gap: 10px;
   }
-
-  & .arrow_down {
-    width: 10px;
-    height: 10px;
-    
-  }
   
   & .module_icon {
     margin-right: 5px;
-    
+    flex-shrink: 0;
   }
 
   @media (max-width: 600px) {
@@ -183,7 +177,7 @@ const Contents = styled.div`
     box-sizing: border-box;
 
     & .container_wrap {
-      padding: 35px;
+      padding: 25px;
       max-width: 820px;
     }
   }
@@ -212,7 +206,7 @@ const Contents = styled.div`
     & img {
       display: block;
       width: 200px;
-      
+      height: 200px;
     }
 
 
@@ -288,14 +282,36 @@ const Contents = styled.div`
       margin-top: 20px;
       padding: 20px;
       background: ${props => props.theme.bgColor};
-
+      & img{
+        display: block;
+        width: 200px;
+      }
       & .head {
+        font-size: 30px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
       }
 
-      & .text {
+      & .info_text {
         margin-top: 20px;
+      }
+      
+      & .mid_line{
+        width: 100%;
+        height: 1px;
+        background: #4A88C7;
+        margin-top: 20px;
+      }
+      
+      & .description{
+        margin-top: 20px;
+        & .text{
+          margin-top: 10px;
+          padding-left: 10px;
+          font-size: 15px;
+          font-weight: 300;
+        }
       }
     }
     & .more_info{
@@ -324,16 +340,20 @@ const Contents = styled.div`
     & .section_01 {
       flex-direction: column;
       & img{
-        margin-top: 40px;
+        margin-top: 25px;
         margin-left: auto;
         width: 100px;
+        height: 100px;
       }
     }
   }
-  @media (max-width: 768px) {
-    & .container {
-      & .container_wrap {
-        padding: 30px;
+  @media (max-width: 600px) {
+    & .section_01 {
+      & .title{
+        font-size: 40px;
+      }
+      & .sub_title{
+        font-size: 18px;
       }
     }
   }
@@ -390,7 +410,7 @@ const StyeldLinkContact = styled(Link)`
 `
 
 const StyeldLinkRoot = styled(Link)`
-  padding: 5px 0px 5px 66px;
+  padding: 5px 0px 5px 55px;
   display: flex;
   align-items: center;
   height: 30px;

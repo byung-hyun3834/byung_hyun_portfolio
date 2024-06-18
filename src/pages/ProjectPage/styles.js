@@ -73,6 +73,11 @@ const Container = styled.div`
       grid-template-columns: repeat(1,1fr);
     }
   }
+  @media (max-width: 600px) {
+    & .pageTitle{
+      font-size: 40px;
+    }
+  }
 `
 
 

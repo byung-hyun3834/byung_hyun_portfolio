@@ -52,7 +52,7 @@ const SettingModal = styled.div`
       margin-top: 20px;
 
       & .title {
-        margin-right: 50px;
+        margin-right: 30px;
       }
     }
   }

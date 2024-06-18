@@ -56,7 +56,11 @@ const Container = styled.div`
       }
     }
   }
-
+  @media (max-width: 600px) {
+    & .pageTitle{
+      font-size: 40px;
+    }
+  }
 `
 
 const Form = styled.form`
@@ -76,7 +80,6 @@ const Form = styled.form`
     margin-top: 40px;
     gap: 40px;
     padding: 30px;
-    border-left: 5px solid #4A88C7;
     background: ${props => props.theme.bgColor};
 
     & .emailForm {

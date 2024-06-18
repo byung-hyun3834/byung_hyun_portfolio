@@ -22,8 +22,7 @@ const ProjectCard = ({project}) => {
                         <div className='inner'></div>
                     </Styles.Skeleton>
                     :
-
-                    <img src={project.thumbnail} />
+                    <img src={project.thumbnail} loading="lazy" />
 
                 }
             </div>

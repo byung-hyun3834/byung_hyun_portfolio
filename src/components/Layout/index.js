@@ -14,6 +14,8 @@ import MobileProjectIcon from "../icons/MobileProjectIcon";
 import MobileContactIcon from "../icons/MobileContactIcon";
 import SettingModal from "../SettingModal";
 import JsIcon from "../icons/JsIcon";
+import ChevronDownIcon from "../icons/ChevronDownIcon";
+import UserInitialIcon from "../icons/UserInitialIcon";
 
 
 const Layout = () => {
@@ -41,13 +43,12 @@ const Layout = () => {
                 <Styles.Header>
                     <div style={{display: 'flex'}}>
                         <div className="linkCircles_wrap">
-
                             <Styles.StyeldLinkCircles to='/' className="close" $modalVisible={modalVisible} ><img src={'/img/icons/close_icon.png'}/></Styles.StyeldLinkCircles>
                             <Styles.StyeldLinkCircles className="hide" $modalVisible={modalVisible} ></Styles.StyeldLinkCircles>
                             <Styles.StyeldLinkCircles className="full_screen" $modalVisible={modalVisible} ></Styles.StyeldLinkCircles>
                         </div>
                         <div className="user">
-                            <img className="initial" src={'/img/icons/user_initial_blue.png'}/>
+                            <UserInitialIcon className="initial" />
                             <span>byung_hyun_portfolio</span>
                         </div>
                         <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>
@@ -83,15 +84,15 @@ const Layout = () => {
                             <div className='title'>Project</div>
                             <div className="root_wrap">
                                 <div className="root">
-                                    <img className="arrow_down" src={'/img/icons/arrow_down_icon.png'}/>
+                                    <ChevronDownIcon className="arrow_down" />
                                     <ModuleIcon className="module_icon"/>
                                     byung_hyun_portfolio
                                 </div>
-                                <div className="root" style={{marginLeft: "25px"}}>
-                                    <img className="arrow_down" src={'/img/icons/arrow_down_icon.png'}/>
-                                    <FolderIcon className="initial"/>
-                                    src
-                                </div>
+                                {/*<div className="root" style={{marginLeft: "25px"}}>*/}
+                                {/*    <ChevronDownIcon/>*/}
+                                {/*    <FolderIcon className="initial"/>*/}
+                                {/*    src*/}
+                                {/*</div>*/}
                                 <StyeldLinkRoot to='/Portfolio' className={this_pathName == "/Portfolio" && "active"}>
                                     <JsIcon className="module_icon" />
                                     home.js
