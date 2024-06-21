@@ -26,14 +26,14 @@ const Card = styled.div`
     }
 
     & .wrap{
-      padding: 13px 13px 30px 13px;
+      padding: 25px 13px 25px 13px;
     }
     & .title{
       font-size: 18px;
       font-weight: 600;
     }
     & .description{
-      margin-top: 20px;
+      margin-top: 12px;
       font-size: 14px;
       line-height: 1.2;
     }
@@ -45,7 +45,7 @@ const Card = styled.div`
       margin-top: 30px;
       border-radius: 4px;
       overflow: hidden;
-      & button{
+      & a{
         color: #fff;
         background: #5F5F5F;
         border: 0;

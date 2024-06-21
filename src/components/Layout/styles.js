@@ -280,7 +280,7 @@ const Contents = styled.div`
 
     & .info_wrap {
       margin-top: 20px;
-      padding: 20px;
+      padding: 20px 20px 50px 20px;
       background: ${props => props.theme.bgColor};
       & img{
         display: block;

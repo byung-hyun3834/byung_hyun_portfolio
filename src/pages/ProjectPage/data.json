@@ -1,0 +1,60 @@
+[
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_portfolio.jpg",
+    "title": "포트폴리오",
+    "description": "intelliJ 스타일의 포트폴리오 용도로 제작한 웹사이트입니다. 지금 보고 있는 바로 이 웹사이트에 해당합니다.",
+    "tags": ["react", "js"],
+    "git": "https://github.com/Edward-Shawn/byung_hyun_portfolio",
+    "link": "https://edward-shawn.github.io/"
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_fassto.jpg",
+    "title": "fassto & aboutFassto",
+    "description": "파스토의 홈페이지 및 회사소개 페이지 UI/UX, 인터렉션, 기능 개선작업진행",
+    "tags": ["html", "scss", "vue", "thymeleaf", "swiper"],
+    "link": "https://www.fassto.ai/",
+    "link2": "https://about.fassto.ai/"
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_fasstoself.jpg",
+    "title": "fasstoSelf",
+    "description": "네이버 공식 풀필먼트 협력사인 파스토의 새로운 쇼핑몰 통합관리 솔루션",
+    "tags": ["React", "TypeScript", "react-hook-form", "MUI"],
+    "link": "https://www.fassto.ai/",
+    "link2": "https://about.fassto.ai/"
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_artfe.jpg",
+    "title": "아트페",
+    "description": "라이피스 근무 당시 제작한 아트페",
+    "tags": ["react", "next"],
+    "link": "https://artfe.kr/"
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_gallery.jpg",
+    "title": "손경수 갤러리",
+    "description": "라이피스 미술 작가의 개인 홈페이지 작업",
+    "tags": ["react", "next"],
+    "link": "http://sonkyungsoogallery.com/main"
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_edusource.jpg",
+    "title": "에듀소스",
+    "description": "라이피스 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": ["react", "next"],
+    "link": "https://edusource.co.kr/"
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_radi.jpg",
+    "title": "라디",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": ["react", "next"]
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_peoplace.jpg",
+    "title": "피플레이스",
+    "description": "메이커빌 근무 당시 제작한 쇼핑몰 사이트인 메이커갤러리의 백오피스입니다.",
+    "tags": ["react", "next"],
+    "link": "https://peoplace.com/"
+  }
+]

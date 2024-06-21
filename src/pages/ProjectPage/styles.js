@@ -11,7 +11,7 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-column-gap: 25px;
-    grid-row-gap: 40px;
+    grid-row-gap: 25px;
   }
   & .item{
     border-radius: 5px;
