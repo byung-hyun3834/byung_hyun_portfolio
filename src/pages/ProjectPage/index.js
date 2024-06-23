@@ -1,5 +1,3 @@
-import {Route} from "react-router-dom";
-import Pages from "../index";
 import React, {useState, useEffect} from "react";
 import Styles from "./styles";
 import ProjectCard from "./components/ProjectCard";
@@ -12,13 +10,11 @@ function ProjectPage() {
     const [isLoading, setIsLoading] = useState(false);
 
     const testdata = data;
-    console.log(testdata)
     const getData = async () => {
         try {
             const result = await axios.get('https://edward-shawn.github.io/myapi/data.json')
             setProject(result.data)
             setIsLoading(true);
-            // console.log(result.data)
             // setTimeout(() => {
             //     setIsLoading(true);
             // }, 1500);
@@ -31,14 +27,13 @@ function ProjectPage() {
         getData();
     }, [])
 
-
     return (<Styles.Container>
         <div className="pageTitle">
-            Project 💻
+            Project 📂
         </div>
         <div className="list_wrap">
             {!isLoading && new Array(10).fill(1).map((_, i) => <SkeletonItem key={i}/>)}
-            { isLoading &&
+            {isLoading &&
                 testdata.map((data, index) => <ProjectCard project={data} key={index}/>)
             }
         </div>

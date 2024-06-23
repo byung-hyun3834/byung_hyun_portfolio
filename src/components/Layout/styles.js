@@ -9,7 +9,7 @@ const Header = styled.div`
   justify-content: space-between;
   color: ${props => props.theme.textColor};
   border-bottom: 1px solid ${props => props.theme.borderColor};
-  background: ${props => props.theme.bgColor};
+  background: ${props => props.theme.headerBgColor};
   overflow: hidden;
   box-sizing: border-box;
   & .window_circles {
@@ -166,6 +166,7 @@ const Contents = styled.div`
     display: flex;
     flex-shrink: 0;
     border-bottom: 1px solid ${props => props.theme.borderColor};
+
     &::-webkit-scrollbar {
       display: none; /* Chrome, Safari, Opera*/
     }
@@ -175,188 +176,9 @@ const Contents = styled.div`
     overflow-y: scroll;
     border-right: 3px solid transparent;
     box-sizing: border-box;
-
-    & .container_wrap {
-      padding: 25px;
-      max-width: 820px;
-    }
   }
 
-  & .section_01 {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 46px;
-    border-bottom: 2px solid ${props => props.theme.sectionBorderColor};
-
-    & .wrap {
-      position: relative;
-    }
-
-    & .title {
-      font-size: 48px;
-      margin-top: 15px;
-      font-weight: 600;
-    }
-
-    & .sub_title {
-      font-size: 24px;
-      font-weight: 500;
-    }
-
-    & img {
-      display: block;
-      width: 200px;
-      height: 200px;
-    }
-
-
-  }
-
-  & .section_02 {
-    margin-top: 46px;
-    padding: 10px 20px 30px;
-    font-weight: 500;
-    line-height: 1.4;
-    border-left: 5px solid #4A88C7;
-    background: ${props => props.theme.bgColor};
-    color: ${props => props.theme.textColor};
-    & .title{
-      color: #4A88C7;
-      font-size: 24px;
-    }
-    & .text{
-      font-size: 16px;
-      margin-top: 20px;
-    }
-  }
-
-  & .skills {
-    margin-top: 36px;
-    border-radius: 4px;
-    border: 2px solid ${props => props.theme.sectionBorderColor};
-    padding: 20px 20px 30px;
-      // border-bottom: 1px solid ${props => props.theme.bgColor};
-
-    & > .title {
-      font-size: 24px;
-      font-weight: bold;
-      color: ${props => props.theme.skillTitleColor};
-    }
-
-    & .skill_list {
-      margin-top: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-
-      & .skill {
-        display: flex;
-        align-items: baseline;
-
-        & .title {
-          font-size: 16px;
-          font-weight: 800;
-          min-width: 100px;
-          color: ${props => props.theme.skillTextColor};
-        }
-
-        & .tags {
-          //display: flex;
-        }
-      }
-
-    }
-  }
-
-  & .Career {
-    margin-top: 30px;
-    font-weight: 500;
-    line-height: 1.4;
-
-    & > .title {
-      font-size: 36px;
-      font-weight: bold;
-    }
-
-    & .info_wrap {
-      margin-top: 20px;
-      padding: 20px 20px 50px 20px;
-      background: ${props => props.theme.bgColor};
-      & img{
-        display: block;
-        width: 200px;
-      }
-      & .head {
-        font-size: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      & .info_text {
-        margin-top: 20px;
-      }
-      
-      & .mid_line{
-        width: 100%;
-        height: 1px;
-        background: #4A88C7;
-        margin-top: 20px;
-      }
-      
-      & .description{
-        margin-top: 20px;
-        & .text{
-          margin-top: 10px;
-          padding-left: 10px;
-          font-size: 15px;
-          font-weight: 300;
-        }
-      }
-    }
-    & .more_info{
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 20px auto 0;
-      width: fit-content;
-      padding: 5px 10px;
-      border: 2px solid ${props => props.theme.sectionBorderColor};
-      & .icon{
-        width: 30px;
-        height: 30px;
-      }
-    }
-  }
-
-  & .Project {
-    margin-top: 58px;
-
-    & .title {
-      font-size: 36px;
-    }
-  }
-  @media (max-width: 900px) {
-    & .section_01 {
-      flex-direction: column;
-      & img{
-        margin-top: 25px;
-        margin-left: auto;
-        width: 100px;
-        height: 100px;
-      }
-    }
-  }
-  @media (max-width: 600px) {
-    & .section_01 {
-      & .title{
-        font-size: 40px;
-      }
-      & .sub_title{
-        font-size: 18px;
-      }
-    }
-  }
+  
 `
 
 const StyeldLinkCircles = styled(Link)`
@@ -379,33 +201,6 @@ const StyeldLinkCircles = styled(Link)`
 
   &.full_screen {
     background: ${props => props.$modalVisible ? props.theme.activeColor : '#61C454'};
-  }
-`
-const StyeldLinkContact = styled(Link)`
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 164px;
-  height: 44px;
-  background: #4A88C7;
-  border: 0;
-  border-radius: 5px;
-  font-size: 24px;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &.mobile{
-    display: none;
-    margin-left: auto;
-  }
-  @media (max-width: 900px) {
-    display: none;
-    position: unset;
-    margin-top: 20px;
-    &.mobile{
-      display: flex;
-    }
   }
 `
 
@@ -447,12 +242,6 @@ const StyeldLinkTab = styled(Link)`
   }
 `;
 
-const StyeldLinkProject = styled(Link)`
-  color: #56C2FF;
-  margin-top: 10px;
-  display: inline-block;
-`;
-
 const StyeldLinkMobile = styled(Link)`
   padding: 10px;
   border-radius: 4px;
@@ -475,8 +264,7 @@ export {
     Contents,
     StyeldLinkTab,
     StyeldLinkRoot,
-    StyeldLinkContact,
-    StyeldLinkProject,
+
     StyeldLinkCircles,
     StyeldLinkMobile,
     Footer,
@@ -489,8 +277,7 @@ export default {
     Contents,
     StyeldLinkTab,
     StyeldLinkRoot,
-    StyeldLinkContact,
-    StyeldLinkProject,
+
     StyeldLinkCircles,
     StyeldLinkMobile,
     Footer,

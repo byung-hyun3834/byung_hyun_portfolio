@@ -4,7 +4,6 @@ import Styles, {Skeleton} from "./styles";
 import {Link} from "react-router-dom";
 
 const ProjectCard = ({project}) => {
-    console.log(project)
     const { thumbnail, title, description, tags, git, link } = project;
 
 
@@ -41,8 +40,9 @@ const ProjectCard = ({project}) => {
                         }
                     </div>
                     <div className="button_group">
-                        {project.git && <a target="_blank" href={project.git} >github</a>}
-                        {project.link && <a target="_blank" href={project.link} >view</a>}
+                        {project.git && <a target="_blank" className="git" href={project.git} >GitHub</a>}
+                        {project.link && <a target="_blank" className="link" href={project.link}>Link</a>}
+                        {project.link && <a target="_blank" className="link" href={project.link}>Detail Info</a>}
                         {/*<button>github</button>*/}
                         {/*<button>view</button>*/}
                     </div>

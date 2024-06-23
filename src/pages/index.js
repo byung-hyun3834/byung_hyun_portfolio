@@ -3,7 +3,7 @@ import MainPage from "./MainPage";
 import PortfolioPage from "./PortfolioPage";
 import HomePage from "./HomePage";
 import ProjectPage from "./ProjectPage";
-import ContactPage from "./ContactPage"
+import CareerPage from "./CareerPage"
 
 
 export default {
@@ -11,7 +11,7 @@ export default {
     PortfolioPage,
     HomePage,
     ProjectPage,
-    ContactPage,
+    CareerPage,
 }
 
 export {
@@ -19,5 +19,5 @@ export {
     PortfolioPage,
     HomePage,
     ProjectPage,
-    ContactPage,
+    CareerPage,
 }

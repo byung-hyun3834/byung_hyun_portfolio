@@ -1,17 +1,21 @@
 import styled, { css } from 'styled-components';
 const Container = styled.div`
-  padding: 35px;
-  max-width: 1200px;
+  padding: 60px 40px 100px 40px;
+  max-width: 820px;
+  margin: 0 auto;
   & .pageTitle{
     font-size: 48px;
     font-weight: bold;
+    padding-bottom: 10px;
+    display: inline-block;
+    border-bottom: 3px solid ${props => props.theme.userInitialColor};
   }
   & .list_wrap{
     margin-top: 55px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 25px;
-    grid-row-gap: 25px;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
   }
   & .item{
     border-radius: 5px;
@@ -63,17 +67,18 @@ const Container = styled.div`
       }
     }
   }
-  @media (max-width: 960px) {
-    & .list_wrap{
-      grid-template-columns: repeat(2,1fr);
-    }
-  }
+  //@media (max-width: 960px) {
+  //  & .list_wrap{
+  //    grid-template-columns: repeat(2,1fr);
+  //  }
+  //}
   @media (max-width: 768px) {
     & .list_wrap{
       grid-template-columns: repeat(1,1fr);
     }
   }
   @media (max-width: 600px) {
+    padding: 60px 25px 25px 25px;
     & .pageTitle{
       font-size: 40px;
     }
