@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Container = styled.div`
   padding: 60px 40px 100px 40px;
   max-width: 820px;
+  margin: 0 auto;
   & .pageTitle {
     font-size: 48px;
     font-weight: bold;

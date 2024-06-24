@@ -30,8 +30,8 @@ export const lightTheme = {
     tagTextColor: '#0969DA',
     tagBgColor: '#74bcff',
     inputBorder: '#bbc4d5',
-    skillBgColor:'#1c2227',
-    skillTextColor: '#1a815e',
+    skillBgColor:'#e4edff',
+    skillTextColor: '#7f4fff',
     iconColor: '#6C707E',
     skeletonBaseColor:'#c5d1e3',
     skeletonColor: '#b7c4de'
