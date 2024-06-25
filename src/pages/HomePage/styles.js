@@ -6,7 +6,6 @@ const Container = styled.div`
   margin: 0 auto;
 
   & .main_banner {
-    
     text-align: center;
     position: relative;
     background: #D9D9D9;
@@ -19,30 +18,36 @@ const Container = styled.div`
       position: relative;
       z-index: 2;
       color: #DFE1E5;
+      
 
+      & .br_mobile{
+        display: none;
+      }
+      
       & .title {
         font-size: 24px;
         margin-top: -27px;
         font-weight: 600;
+        line-height: 1.2;
       }
 
       & .sub_title {
         opacity: 0.5;
-        font-size: 100px;
+        font-size: 80px;
         font-weight: bold;
+        
       }
 
       & .Introduction {
+        padding: 0 10px;
         margin-top: 50px;
-
+        line-height: 1.3;
         & strong {
           font-weight: bold;
           background: #61dafb;
         }
       }
     }
-
-
   }
 
   & .aboutMe {
@@ -59,10 +64,10 @@ const Container = styled.div`
       margin-top: 30px;
       padding: 20px 20px 20px;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       position: relative;
-      gap: 50px;
+      gap: 35px;
     }
 
     & .border_info {
@@ -96,14 +101,14 @@ const Container = styled.div`
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      
+
       & img {
         display: block;
         width: 150px;
         height: 150px;
       }
     }
-    
+
     & .links {
       width: 100%;
       border-radius: 4px;
@@ -119,6 +124,7 @@ const Container = styled.div`
       & .profile {
         text-align: center;
         margin-bottom: 15px;
+
         & .name {
           font-size: 20px;
           padding-bottom: 10px;
@@ -209,17 +215,52 @@ const Container = styled.div`
       }
     }
   }
+
+  @media (max-width: 768px) {
+    & .main_banner {
+      & .wrap {
+        & .br_mobile{
+          display: block;
+        }
+        & .br_pc{
+          display: none;
+        }
+        
+        & .title {
+          margin-top:-15px;
+          font-size: 18px;
+        }
+        & .sub_title {
+          font-size: 50px;
+        }
+      }
+    }
+    
+    & .aboutMe{
+      & .wrap{
+        align-items: center;
+        flex-direction: column;  
+      }
+    }
+
+    & .Interview_wrap{
+      padding: 20px 20px 50px;
+    }
+  }
+
   @media (max-width: 600px) {
 
-    padding: 60px 25px 25px 25px;
+    padding: 60px 20px 70px 20px;
 
     & .main_banner {
-      & .title {
-        font-size: 24px;
-      }
+      & .wrap {
+        & .title {
+          
+        }
 
-      & .sub_title {
-        font-size: 72px;
+        & .sub_title {
+          
+        }
       }
     }
   }

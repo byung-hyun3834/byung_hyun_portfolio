@@ -27,7 +27,7 @@ export const lightTheme = {
     borderColor: '#c3c7d0',
     sectionBorderColor:'#ccdaea',
     activeColor: '#b7c4de',
-    tagTextColor: '#0969DA',
+    tagTextColor: '#fff',
     tagBgColor: '#74bcff',
     inputBorder: '#bbc4d5',
     skillBgColor:'#e4edff',

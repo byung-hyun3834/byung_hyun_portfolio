@@ -20,10 +20,9 @@ function HomePage() {
                 <div className="main_banner">
                     <div className="wrap">
                         <div className="sub_title">Front-End</div>
-                        <div className="title">프론트엔드 개발자 손병현 입니다</div>
+                        <div className="title">프론트엔드 개발자<br className="br_mobile" /> 손병현 입니다</div>
                         <div className="Introduction">
-                            사용자 접근성과 편의성을 향상시키는 데 끊임없이 고민하고<br/>
-                            이를 실현하는 개발자가 되고자 합니다.
+                            사용자 접근성과 편의성을 향상시키는 데 끊임없이 고민하고<br className="br_pc" /> 이를 실현하는 개발자가 되고자 합니다.
                         </div>
                     </div>
                 </div>
@@ -63,7 +62,9 @@ function HomePage() {
                             <br/>
                             이를 통해 spa 알게되면서 React로 서비스 구현을 시작하게 되었고
                             데이터를 받아오는 동안 페이지 전체를 랜더링하는것이 아닌 데이터가 적용되는 부분만 랜더링을 발생시켜
-                            유저와 서버 모두에게 부담되는 영역을 해결하면서 웹에대한 심층적인 재미를 느껴 프론트엔드로 개발 방향성을 잡고
+                            유저와 서버 모두에게 부담되는 영역을 해결하면서 웹에대한 심층적인 재미를 느껴 프론트엔드로 개발 방향성을 잡았고
+                            <br/>
+                            <br/>
                             사용자들이 계속해서 방문하고 싶어하는 사이트를 개발하는 것이 목표입니다.
 
                         </div>

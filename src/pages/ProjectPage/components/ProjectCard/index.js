@@ -42,7 +42,7 @@ const ProjectCard = ({project}) => {
                     <div className="button_group">
                         {project.git && <a target="_blank" className="git" href={project.git} >GitHub</a>}
                         {project.link && <a target="_blank" className="link" href={project.link}>Link</a>}
-                        {project.link && <a target="_blank" className="link" href={project.link}>Detail Info</a>}
+                        {project.Detail && <a target="_blank" className="Detail" href={project.link}>Detail Info</a>}
                         {/*<button>github</button>*/}
                         {/*<button>view</button>*/}
                     </div>

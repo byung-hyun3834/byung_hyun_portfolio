@@ -10,23 +10,35 @@
   {
     "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_peoplace.jpg",
     "title": "피플레이스",
-    "description": "영상, 이미지, ppt 등등 콘텐츠 유료화 해서 판매 및 정산 플랫폼, 업무보조 컴포넌트 단위 작업, 회원가입 플로우 컨텐츠 등록(에디터 커스텀, 태그) 분야 작업,",
-    "tags": ["react", "styled-component"],
+    "description": "영상, 이미지, ppt 등등 콘텐츠 유료화 해서 판매 및 정산할 수 있는 플랫폼입니다, 회원가입 플로우 구현, 콘텐츠 등록(에디터 커스텀, 태그)부분 컴포넌트 단위 작업을 담당했습니다",
+    "tags": ["react", "js", "custom hook", "styled-component"],
     "link": "https://peoplace.com/",
     "detail": ""
   },
   {
     "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_edusource.jpg",
     "title": "에듀소스",
-    "description": "시설정보, 교육정보 검색필터, 리스트, 상세페이지 작업\n달력 라이브러리 적용해서 작업,\n학부모 커뮤니티 사이트 학교,학원 정보를 한눈에 확인할 수 있는 플랫폼\n",
-    "tags": ["react", "styled-component"],
+    "description": "학부모 커뮤니티 사이트로, 학교와 학원 정보를 한눈에 확인할 수 있는 플랫폼입니다. 시설정보와 교육정보에 대한 검색 필터, 리스트, 상세 페이지 작업을 담당했습니다.",
+    "tags": ["react", "js", "custom hook", "styled-component"],
     "link": "https://edusource.co.kr/"
   },
   {
     "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_gallery.jpg",
     "title": "손경수 갤러리",
-    "description": "미술 작가님의 소개 및 정보, 그리고 작품을 소개하는 개인 사이트 제작 미술 작의 의뢰로 기획 내용과 요구 사항을 참고 하여 작업했습니다.",
-    "tags": ["html", "scss"],
+    "description": "미술 작가님의 소개 및 정보, 그리고 작품을 소개하는 개인 사이트 제작하였습니다. 작가님의 의뢰로 기획 내용과 요구 사항을 참고 하여 작업했습니다.",
+    "tags": ["html", "js", "jquery", "swiper", "scss"],
     "link": "http://sonkyungsoogallery.com/main"
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_artfe.jpg",
+    "title": "아트페",
+    "description": "미술관이 아닌 미술작가의 작업 공간을 방문하여 작가님의 작품 설명과 감상을 직접 들을 수 있는 플랫폼입니다. 기간 선택을 통해 방문 예약하는 플로우를 작업하고, 썸네일 리스트 및 회원가입 플로우 작업을 담당했습니다.",
+    "tags": ["react", "js", "custom hook", "styled-component"]
+  },
+  {
+    "thumbnail": "https://edward-shawn.github.io/myapi/portfolio-img/thumbnail_radi.jpg",
+    "title": "라디",
+    "description": "미국 가정집에서 전력사용량을 API로 가져와서 시각화된 데이터로 솔라 에너지 사용 시 월별 절감된 에너지량도 확인할 수 있는 플랫폼입니다. highcharts 라이브러리 적용과 디자인 시스템 작업을 담당했습니다.",
+    "tags": ["react", "js", "custom hook", "styled-component"]
   }
 ]

@@ -33,6 +33,18 @@ const Header = styled.div`
     align-items: center;
 
   }
+  @media (max-width: 600px) {
+    padding: 0 20px;
+    & .user_info {
+      & span{
+        width: 70px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;  
+      }
+      
+    }
+  }
 `
 
 
@@ -140,7 +152,8 @@ const Dock = styled.div`
 
 const IjModal = styled.div`
   position: absolute;
-  max-width: 700px;
+  max-width: 520px;
+  width: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

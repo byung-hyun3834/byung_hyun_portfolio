@@ -78,7 +78,7 @@ const Container = styled.div`
     }
   }
   @media (max-width: 600px) {
-    padding: 60px 25px 25px 25px;
+    padding: 60px 20px 70px 20px;
     & .pageTitle{
       font-size: 40px;
     }

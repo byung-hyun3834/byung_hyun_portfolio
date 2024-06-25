@@ -40,16 +40,15 @@ const Container = styled.div`
       padding: 20px 20px 50px 20px;
       background: ${props => props.theme.bgColor};
 
-      & img {
-        display: block;
-        width: 200px;
-      }
-
       & .head {
         font-size: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+      }
+      
+      & .date{
+        color: #4A88C7;
       }
 
       & .info_text {
@@ -71,29 +70,23 @@ const Container = styled.div`
           padding-left: 10px;
           font-size: 15px;
           font-weight: 300;
+          & a{
+            font-weight: bold;
+            color: #4A88C7;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
-
-    // & .more_info{
-    //   display: flex;
-    //   align-items: center;
-    //   gap: 10px;
-    //   margin: 20px auto 0;
-    //   width: fit-content;
-    //   padding: 5px 10px;
-      //   border: 2px solid ${props => props.theme.sectionBorderColor};
-    //   & .icon{
-    //     width: 30px;
-    //     height: 30px;
-    //   }
-    // }
   }
   @media (max-width: 600px) {
-    padding: 60px 25px 25px 25px;
+    padding: 60px 20px 70px 20px;
     & .pageTitle{
       font-size: 40px;
     }
+    
   }
 `
 
