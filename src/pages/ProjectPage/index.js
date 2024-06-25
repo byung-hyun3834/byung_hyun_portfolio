@@ -9,10 +9,9 @@ function ProjectPage() {
     const [project, setProject] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
-    const testdata = data;
     const getData = async () => {
         try {
-            const result = await axios.get('https://edward-shawn.github.io/myapi/data.json')
+            const result = await axios.get('https://byung-hyun3834.github.io/myapi/data.json')
             setProject(result.data)
             setIsLoading(true);
             // setTimeout(() => {
@@ -34,7 +33,7 @@ function ProjectPage() {
         <div className="list_wrap">
             {!isLoading && new Array(10).fill(1).map((_, i) => <SkeletonItem key={i}/>)}
             {isLoading &&
-                testdata.map((data, index) => <ProjectCard project={data} key={index}/>)
+                project.map((data, index) => <ProjectCard project={data} key={index}/>)
             }
         </div>
     </Styles.Container>);
