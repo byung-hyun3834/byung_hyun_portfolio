@@ -43,7 +43,7 @@ function HomePage() {
                                     </div>
                                 </div>
                                 <div className="link_title">Email : <span className="link_text" onClick={(e) => handleCopyClipBoard('sbh3834@naver.com')}>sbh3834@naver.com</span></div>
-                                <div className="link_title">GitHub : <a className="link_text" href="https://github.com/Edward-Shawn" target="_blank">ByungHyun Son github</a></div>
+                                <div className="link_title">GitHub : <a className="link_text" href="https://github.com/byung-hyun3834" target="_blank">ByungHyun Son github</a></div>
                             </div>
                         </div>
 

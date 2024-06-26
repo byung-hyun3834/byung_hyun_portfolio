@@ -54,7 +54,7 @@ const Layout = () => {
                             <UserInitialIcon className="initial"/>
                             <span>byung_hyun_portfolio</span>
                         </div>
-                        <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>
+                        <a className="repo" href='https://github.com/byung-hyun3834' target='_blank'>
                             <VcsIcon/>
                             GitHub
                         </a>
@@ -79,7 +79,7 @@ const Layout = () => {
                                     <MobileProjectIcon/>
                                 </Styles.StyeldLinkMobile>
                             </div>
-                            <a className="repo" href='https://github.com/Edward-Shawn' target='_blank'>
+                            <a className="repo" href='https://github.com/byung-hyun3834' target='_blank'>
                                 <VcsIcon className="repo"/>
                             </a>
                         </div>
